@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typography — Component Library</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="min-h-screen bg-base-200">
+    <header class="bg-base-100 border-b border-base-300 px-6 py-4 flex items-center gap-4">
+      <a href="/components/index.html" class="btn btn-ghost btn-sm gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Components
+      </a>
+      <span class="text-base-content/30">/</span>
+      <h1 class="font-bold text-base-content">Typography</h1>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-10 space-y-12">
+
+      <!-- Heading Scale -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Heading Scale</h2>
+        <div class="bg-base-100 rounded-2xl p-8 shadow space-y-4">
+          <div><span class="text-xs text-base-content/30 uppercase tracking-widest mr-3">h1</span><h1 class="inline text-5xl font-extrabold tracking-tight leading-tight">The quick brown fox</h1></div>
+          <div class="divider my-1"></div>
+          <div><span class="text-xs text-base-content/30 uppercase tracking-widest mr-3">h2</span><h2 class="inline text-4xl font-bold tracking-tight">The quick brown fox</h2></div>
+          <div class="divider my-1"></div>
+          <div><span class="text-xs text-base-content/30 uppercase tracking-widest mr-3">h3</span><h3 class="inline text-3xl font-semibold">The quick brown fox</h3></div>
+          <div class="divider my-1"></div>
+          <div><span class="text-xs text-base-content/30 uppercase tracking-widest mr-3">h4</span><h4 class="inline text-2xl font-semibold">The quick brown fox</h4></div>
+          <div class="divider my-1"></div>
+          <div><span class="text-xs text-base-content/30 uppercase tracking-widest mr-3">h5</span><h5 class="inline text-xl font-semibold">The quick brown fox</h5></div>
+          <div class="divider my-1"></div>
+          <div><span class="text-xs text-base-content/30 uppercase tracking-widest mr-3">h6</span><h6 class="inline text-base font-semibold uppercase tracking-wide">The quick brown fox</h6></div>
+        </div>
+      </section>
+
+      <!-- Body Text Variants -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Body Text</h2>
+        <div class="bg-base-100 rounded-2xl p-8 shadow space-y-5">
+          <div>
+            <p class="text-xs text-base-content/40 uppercase tracking-widest mb-1">Lead / Intro</p>
+            <p class="text-xl text-base-content/80 leading-relaxed">Design systems help teams build better products faster by providing reusable components and clear guidelines for consistency.</p>
+          </div>
+          <div class="divider"></div>
+          <div>
+            <p class="text-xs text-base-content/40 uppercase tracking-widest mb-1">Body</p>
+            <p class="text-base leading-7">Tailwind CSS is a utility-first CSS framework that provides low-level utility classes to build custom designs without leaving your HTML. Combined with DaisyUI, you get semantic component classes that speed up prototyping.</p>
+          </div>
+          <div class="divider"></div>
+          <div>
+            <p class="text-xs text-base-content/40 uppercase tracking-widest mb-1">Muted</p>
+            <p class="text-sm text-base-content/50 leading-6">Last updated on June 1, 2024 · 4 min read · Published by Alex Morgan</p>
+          </div>
+          <div class="divider"></div>
+          <div>
+            <p class="text-xs text-base-content/40 uppercase tracking-widest mb-1">Small / Caption</p>
+            <p class="text-xs text-base-content/40 leading-5">* By submitting this form you agree to our Terms of Service and Privacy Policy. Data is processed in accordance with GDPR.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blockquote + Prose -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Blockquote & Callout</h2>
+        <div class="bg-base-100 rounded-2xl p-8 shadow space-y-6">
+          <blockquote class="border-l-4 border-primary pl-5 italic text-base-content/70 text-lg leading-relaxed">
+            "Any sufficiently advanced technology is indistinguishable from magic."
+            <footer class="mt-2 text-sm not-italic text-base-content/40">— Arthur C. Clarke</footer>
+          </blockquote>
+
+          <div class="rounded-xl border-l-4 border-info bg-info/10 p-4">
+            <p class="text-sm font-semibold text-info mb-1">Note</p>
+            <p class="text-sm text-base-content/70">This feature is currently in beta. Breaking changes may occur in future releases.</p>
+          </div>
+
+          <div class="rounded-xl border-l-4 border-warning bg-warning/10 p-4">
+            <p class="text-sm font-semibold text-warning mb-1">Warning</p>
+            <p class="text-sm text-base-content/70">Deleting this resource will permanently remove all associated data. This action cannot be undone.</p>
+          </div>
+
+          <div class="rounded-xl border-l-4 border-success bg-success/10 p-4">
+            <p class="text-sm font-semibold text-success mb-1">Tip</p>
+            <p class="text-sm text-base-content/70">Use keyboard shortcut <kbd class="kbd kbd-sm">⌘K</kbd> to quickly search across all your projects and files.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Inline Code + Code Block -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Code</h2>
+        <div class="bg-base-100 rounded-2xl p-8 shadow space-y-6">
+          <div>
+            <p class="text-xs text-base-content/40 uppercase tracking-widest mb-3">Inline Code</p>
+            <p class="text-sm leading-7">
+              Use <code class="bg-base-200 text-accent px-1.5 py-0.5 rounded font-mono text-sm">npm install</code> to install dependencies,
+              then run <code class="bg-base-200 text-accent px-1.5 py-0.5 rounded font-mono text-sm">npm run dev</code> to start the
+              development server at <code class="bg-base-200 text-accent px-1.5 py-0.5 rounded font-mono text-sm">localhost:5173</code>.
+            </p>
+          </div>
+          <div>
+            <p class="text-xs text-base-content/40 uppercase tracking-widest mb-3">Code Block</p>
+            <div class="mockup-code">
+              <pre data-prefix="$"><code>npm create vite@latest my-app</code></pre>
+              <pre data-prefix="$"><code>cd my-app</code></pre>
+              <pre data-prefix="$"><code>npm install -D tailwindcss @tailwindcss/vite daisyui</code></pre>
+              <pre data-prefix="$" class="text-success"><code>npm run dev</code></pre>
+            </div>
+          </div>
+          <div>
+            <p class="text-xs text-base-content/40 uppercase tracking-widest mb-3">Keyboard Keys</p>
+            <div class="flex flex-wrap gap-3 items-center">
+              <kbd class="kbd">⌘</kbd> <span class="text-sm text-base-content/50">+</span>
+              <kbd class="kbd">K</kbd>
+              <span class="mx-2 text-base-content/30">|</span>
+              <kbd class="kbd kbd-sm">Ctrl</kbd> <span class="text-sm text-base-content/50">+</span>
+              <kbd class="kbd kbd-sm">Shift</kbd> <span class="text-sm text-base-content/50">+</span>
+              <kbd class="kbd kbd-sm">P</kbd>
+              <span class="mx-2 text-base-content/30">|</span>
+              <kbd class="kbd kbd-lg">Enter</kbd>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lists -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Lists</h2>
+        <div class="bg-base-100 rounded-2xl p-8 shadow grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <p class="text-xs text-base-content/40 uppercase tracking-widest mb-3">Unordered</p>
+            <ul class="list-disc list-inside space-y-2 text-sm text-base-content/80">
+              <li>Utility-first approach</li>
+              <li>Responsive design system</li>
+              <li>Dark mode support</li>
+              <li>Component library
+                <ul class="list-disc list-inside ml-4 mt-2 space-y-1 text-base-content/60">
+                  <li>Buttons & forms</li>
+                  <li>Cards & modals</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs text-base-content/40 uppercase tracking-widest mb-3">Ordered</p>
+            <ol class="list-decimal list-inside space-y-2 text-sm text-base-content/80">
+              <li>Install dependencies</li>
+              <li>Configure Vite plugin</li>
+              <li>Set up base styles</li>
+              <li>Build your components</li>
+              <li>Run the dev server</li>
+            </ol>
+          </div>
+          <div>
+            <p class="text-xs text-base-content/40 uppercase tracking-widest mb-3">Description</p>
+            <dl class="space-y-3 text-sm">
+              <div>
+                <dt class="font-semibold text-base-content">Tailwind CSS</dt>
+                <dd class="text-base-content/60 mt-0.5">Utility-first CSS framework for rapid UI development.</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-base-content">DaisyUI</dt>
+                <dd class="text-base-content/60 mt-0.5">Component library built on top of Tailwind CSS.</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-base-content">Vite</dt>
+                <dd class="text-base-content/60 mt-0.5">Next-generation frontend build tool.</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dividers -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Dividers</h2>
+        <div class="bg-base-100 rounded-2xl p-8 shadow space-y-4">
+          <div class="divider">Default</div>
+          <div class="divider divider-primary">Primary</div>
+          <div class="divider divider-secondary">Secondary</div>
+          <div class="flex gap-4 items-stretch h-16">
+            <span class="text-sm flex items-center">Left</span>
+            <div class="divider divider-horizontal">OR</div>
+            <span class="text-sm flex items-center">Right</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Link Styles -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Links</h2>
+        <div class="bg-base-100 rounded-2xl p-8 shadow flex flex-wrap gap-6 items-center">
+          <a class="link">Default link</a>
+          <a class="link link-primary">Primary link</a>
+          <a class="link link-secondary">Secondary link</a>
+          <a class="link link-accent">Accent link</a>
+          <a class="link link-neutral">Neutral link</a>
+          <a class="link link-success">Success link</a>
+          <a class="link link-error">Error / Danger link</a>
+          <a class="link link-hover">Hover-only underline</a>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

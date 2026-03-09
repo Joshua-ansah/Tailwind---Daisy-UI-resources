@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stats & Data — Component Library</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="min-h-screen bg-base-200">
+    <header class="bg-base-100 border-b border-base-300 px-6 py-4 flex items-center gap-4">
+      <a href="/components/index.html" class="btn btn-ghost btn-sm gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Components
+      </a>
+      <span class="text-base-content/30">/</span>
+      <h1 class="font-bold text-base-content">Stats & Data</h1>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-10 space-y-12">
+
+      <!-- Stats — Horizontal -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Stats — Horizontal</h2>
+        <div class="stats shadow w-full bg-base-100">
+          <div class="stat">
+            <div class="stat-figure text-primary">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div class="stat-title">Total Users</div>
+            <div class="stat-value text-primary">48,295</div>
+            <div class="stat-desc">↗ 12% from last month</div>
+          </div>
+          <div class="stat">
+            <div class="stat-figure text-secondary">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div class="stat-title">Monthly Revenue</div>
+            <div class="stat-value text-secondary">$84.2k</div>
+            <div class="stat-desc">↗ 8.1% vs previous month</div>
+          </div>
+          <div class="stat">
+            <div class="stat-figure text-accent">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            </div>
+            <div class="stat-title">Page Views</div>
+            <div class="stat-value">2.4M</div>
+            <div class="stat-desc">↘ 3.2% vs last week</div>
+          </div>
+          <div class="stat">
+            <div class="stat-figure text-success">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+            </div>
+            <div class="stat-title">Conversion Rate</div>
+            <div class="stat-value text-success">3.7%</div>
+            <div class="stat-desc">↗ 0.4% from last quarter</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats — Vertical -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Stats — Vertical</h2>
+        <div class="stats stats-vertical shadow bg-base-100 w-full sm:w-72">
+          <div class="stat">
+            <div class="stat-title">Downloads</div>
+            <div class="stat-value">31K</div>
+            <div class="stat-desc">Jan 1 – May 1</div>
+          </div>
+          <div class="stat">
+            <div class="stat-title">New Registrations</div>
+            <div class="stat-value">4,200</div>
+            <div class="stat-desc">↗ 400 (10.5%)</div>
+          </div>
+          <div class="stat">
+            <div class="stat-title">New Feedbacks</div>
+            <div class="stat-value">1,350</div>
+            <div class="stat-desc">↘ 90 (6.1%)</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KPI Grid -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">KPI Grid (4-column)</h2>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="bg-base-100 rounded-2xl shadow p-5">
+            <p class="text-xs text-base-content/40 uppercase tracking-widest mb-2">MRR</p>
+            <p class="text-3xl font-bold">$12.4k</p>
+            <div class="flex items-center gap-1 mt-2">
+              <span class="badge badge-success badge-sm gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+                +18%
+              </span>
+              <span class="text-xs text-base-content/40">vs last month</span>
+            </div>
+          </div>
+          <div class="bg-base-100 rounded-2xl shadow p-5">
+            <p class="text-xs text-base-content/40 uppercase tracking-widest mb-2">Churn Rate</p>
+            <p class="text-3xl font-bold">2.1%</p>
+            <div class="flex items-center gap-1 mt-2">
+              <span class="badge badge-success badge-sm gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+                -0.3%
+              </span>
+              <span class="text-xs text-base-content/40">improving</span>
+            </div>
+          </div>
+          <div class="bg-base-100 rounded-2xl shadow p-5">
+            <p class="text-xs text-base-content/40 uppercase tracking-widest mb-2">Active Users</p>
+            <p class="text-3xl font-bold">8,392</p>
+            <div class="flex items-center gap-1 mt-2">
+              <span class="badge badge-warning badge-sm gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+                -2.1%
+              </span>
+              <span class="text-xs text-base-content/40">vs last week</span>
+            </div>
+          </div>
+          <div class="bg-base-100 rounded-2xl shadow p-5">
+            <p class="text-xs text-base-content/40 uppercase tracking-widest mb-2">NPS Score</p>
+            <p class="text-3xl font-bold">72</p>
+            <div class="flex items-center gap-1 mt-2">
+              <span class="badge badge-success badge-sm gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+                +5 pts
+              </span>
+              <span class="text-xs text-base-content/40">this quarter</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comparison Progress Bars -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Comparison Progress Bars</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow space-y-5">
+          <div>
+            <div class="flex justify-between text-sm mb-2">
+              <span class="font-medium">Organic Search</span>
+              <span class="text-base-content/60">49%</span>
+            </div>
+            <div class="w-full bg-base-200 rounded-full h-3">
+              <div class="bg-primary h-3 rounded-full" style="width: 49%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm mb-2">
+              <span class="font-medium">Direct</span>
+              <span class="text-base-content/60">24%</span>
+            </div>
+            <div class="w-full bg-base-200 rounded-full h-3">
+              <div class="bg-secondary h-3 rounded-full" style="width: 24%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm mb-2">
+              <span class="font-medium">Referral</span>
+              <span class="text-base-content/60">18%</span>
+            </div>
+            <div class="w-full bg-base-200 rounded-full h-3">
+              <div class="bg-accent h-3 rounded-full" style="width: 18%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm mb-2">
+              <span class="font-medium">Social</span>
+              <span class="text-base-content/60">9%</span>
+            </div>
+            <div class="w-full bg-base-200 rounded-full h-3">
+              <div class="bg-info h-3 rounded-full" style="width: 9%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Countdown -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Countdown</h2>
+        <div class="bg-base-100 rounded-2xl p-8 shadow">
+          <p class="text-sm text-base-content/50 text-center mb-6">Next product launch in:</p>
+          <div class="flex flex-wrap gap-4 justify-center">
+            <div class="flex flex-col items-center gap-1">
+              <span class="countdown font-mono text-5xl font-bold bg-base-200 rounded-xl px-4 py-3">
+                <span style="--value:14;"></span>
+              </span>
+              <span class="text-xs text-base-content/40 uppercase tracking-wider">days</span>
+            </div>
+            <div class="flex flex-col items-center gap-1">
+              <span class="countdown font-mono text-5xl font-bold bg-base-200 rounded-xl px-4 py-3">
+                <span style="--value:8;"></span>
+              </span>
+              <span class="text-xs text-base-content/40 uppercase tracking-wider">hours</span>
+            </div>
+            <div class="flex flex-col items-center gap-1">
+              <span class="countdown font-mono text-5xl font-bold bg-base-200 rounded-xl px-4 py-3">
+                <span style="--value:37;"></span>
+              </span>
+              <span class="text-xs text-base-content/40 uppercase tracking-wider">min</span>
+            </div>
+            <div class="flex flex-col items-center gap-1">
+              <span class="countdown font-mono text-5xl font-bold bg-primary text-primary-content rounded-xl px-4 py-3">
+                <span style="--value:22;"></span>
+              </span>
+              <span class="text-xs text-base-content/40 uppercase tracking-wider">sec</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data Table Summary -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Summary Card Grid</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="bg-base-100 rounded-2xl shadow p-5 flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            </div>
+            <div>
+              <p class="text-sm text-base-content/50">New sign-ups today</p>
+              <p class="text-2xl font-bold mt-0.5">142</p>
+              <p class="text-xs text-success mt-1">↗ 23 more than yesterday</p>
+            </div>
+          </div>
+          <div class="bg-base-100 rounded-2xl shadow p-5 flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            </div>
+            <div>
+              <p class="text-sm text-base-content/50">Orders this week</p>
+              <p class="text-2xl font-bold mt-0.5">1,847</p>
+              <p class="text-xs text-warning mt-1">↘ 12 fewer than last week</p>
+            </div>
+          </div>
+          <div class="bg-base-100 rounded-2xl shadow p-5 flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-success/10 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div>
+              <p class="text-sm text-base-content/50">Revenue today</p>
+              <p class="text-2xl font-bold mt-0.5">$3,920</p>
+              <p class="text-xs text-success mt-1">↗ On track for monthly goal</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

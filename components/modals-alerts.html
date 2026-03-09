@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modals & Alerts — Component Library</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="min-h-screen bg-base-200">
+    <header class="bg-base-100 border-b border-base-300 px-6 py-4 flex items-center gap-4">
+      <a href="/components/index.html" class="btn btn-ghost btn-sm gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Components
+      </a>
+      <span class="text-base-content/30">/</span>
+      <h1 class="font-bold text-base-content">Modals & Alerts</h1>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-10 space-y-12">
+
+      <!-- Alerts -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Alerts</h2>
+        <div class="space-y-3">
+          <div role="alert" class="alert alert-info">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <div><h4 class="font-bold">Info</h4><span class="text-sm">Your session will expire in 10 minutes.</span></div>
+          </div>
+          <div role="alert" class="alert alert-success">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <div><h4 class="font-bold">Success</h4><span class="text-sm">Your file has been uploaded successfully.</span></div>
+          </div>
+          <div role="alert" class="alert alert-warning">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+            <div><h4 class="font-bold">Warning</h4><span class="text-sm">You are running low on storage space.</span></div>
+          </div>
+          <div role="alert" class="alert alert-error">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <div><h4 class="font-bold">Error</h4><span class="text-sm">Failed to save changes. Please try again.</span></div>
+            <button class="btn btn-sm btn-ghost ml-auto">Retry</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Banner Strip -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Announcement Banner</h2>
+        <div class="bg-primary text-primary-content px-6 py-3 rounded-2xl flex items-center justify-between gap-4">
+          <span class="text-sm font-medium">🎉 New feature: Multi-tenant support is now live!</span>
+          <div class="flex gap-2 shrink-0">
+            <a href="#" class="btn btn-sm btn-primary-content text-primary">Learn more</a>
+            <button class="btn btn-sm btn-ghost text-primary-content">Dismiss</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Toast Notifications -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Toast Notifications (static preview)</h2>
+        <div class="space-y-2 w-80">
+          <div class="alert alert-success shadow-lg">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
+            <span class="text-sm">Saved successfully!</span>
+            <button class="btn btn-xs btn-ghost ml-auto">✕</button>
+          </div>
+          <div class="alert alert-error shadow-lg">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            <span class="text-sm">Connection failed.</span>
+            <button class="btn btn-xs btn-ghost ml-auto">✕</button>
+          </div>
+          <div class="alert alert-warning shadow-lg">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01"/></svg>
+            <span class="text-sm">Unsaved changes detected.</span>
+            <div class="ml-auto flex gap-2">
+              <button class="btn btn-xs btn-warning">Save</button>
+              <button class="btn btn-xs btn-ghost">Discard</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal — Basic (static open) -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Modal — Basic (rendered open)</h2>
+        <div class="bg-base-300 rounded-2xl p-8 flex items-center justify-center min-h-64">
+          <div class="modal-box shadow-2xl w-full max-w-md">
+            <h3 class="font-bold text-lg">Dialog Title</h3>
+            <p class="py-4 text-sm text-base-content/70">This is a standard modal dialog. Press ESC or click outside to close it in a real implementation.</p>
+            <div class="modal-action">
+              <button class="btn btn-ghost">Cancel</button>
+              <button class="btn btn-primary">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal — Confirmation -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Modal — Confirmation / Destructive</h2>
+        <div class="bg-base-300 rounded-2xl p-8 flex items-center justify-center min-h-64">
+          <div class="modal-box shadow-2xl w-full max-w-sm text-center">
+            <div class="w-14 h-14 rounded-full bg-error/10 flex items-center justify-center mx-auto mb-4">
+              <svg class="w-7 h-7 text-error" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+            </div>
+            <h3 class="font-bold text-lg">Delete project?</h3>
+            <p class="text-sm text-base-content/60 mt-2 mb-6">This action cannot be undone. All data associated with this project will be permanently removed.</p>
+            <div class="flex gap-3">
+              <button class="btn btn-ghost flex-1">Cancel</button>
+              <button class="btn btn-error flex-1">Delete</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal — Form -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Modal — Form</h2>
+        <div class="bg-base-300 rounded-2xl p-8 flex items-center justify-center min-h-80">
+          <div class="modal-box shadow-2xl w-full max-w-md">
+            <h3 class="font-bold text-lg mb-1">Invite Team Member</h3>
+            <p class="text-sm text-base-content/50 mb-4">Enter the email address of the person you want to invite.</p>
+            <div class="form-control mb-4">
+              <label class="label pb-1"><span class="label-text">Email address</span></label>
+              <input type="email" placeholder="colleague@company.com" class="input input-bordered w-full" />
+            </div>
+            <div class="form-control mb-6">
+              <label class="label pb-1"><span class="label-text">Role</span></label>
+              <select class="select select-bordered w-full">
+                <option>Viewer</option>
+                <option>Editor</option>
+                <option>Admin</option>
+              </select>
+            </div>
+            <div class="modal-action">
+              <button class="btn btn-ghost">Cancel</button>
+              <button class="btn btn-primary">Send invite</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Empty State -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Empty State</h2>
+        <div class="bg-base-100 rounded-2xl shadow p-12 flex flex-col items-center text-center max-w-md mx-auto">
+          <div class="w-20 h-20 rounded-2xl bg-base-200 flex items-center justify-center mb-6">
+            <svg class="w-10 h-10 text-base-content/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+          </div>
+          <h3 class="font-bold text-xl mb-2">No projects yet</h3>
+          <p class="text-sm text-base-content/50 mb-6">Get started by creating your first project. It only takes a minute.</p>
+          <button class="btn btn-primary gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+            New Project
+          </button>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

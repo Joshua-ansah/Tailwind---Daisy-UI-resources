@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables — Component Library</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="min-h-screen bg-base-200">
+    <header class="bg-base-100 border-b border-base-300 px-6 py-4 flex items-center gap-4">
+      <a href="/components/index.html" class="btn btn-ghost btn-sm gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Components
+      </a>
+      <span class="text-base-content/30">/</span>
+      <h1 class="font-bold text-base-content">Tables</h1>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-10 space-y-12">
+
+      <!-- Basic Table -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Basic Table</h2>
+        <div class="bg-base-100 rounded-2xl shadow overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Joined</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <td>Alex Morgan</td>
+                  <td>alex@example.com</td>
+                  <td>Admin</td>
+                  <td>Jan 12, 2024</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>Jordan Lee</td>
+                  <td>jordan@example.com</td>
+                  <td>Editor</td>
+                  <td>Feb 8, 2024</td>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <td>Casey Kim</td>
+                  <td>casey@example.com</td>
+                  <td>Viewer</td>
+                  <td>Mar 3, 2024</td>
+                </tr>
+                <tr>
+                  <th>4</th>
+                  <td>Riley Chen</td>
+                  <td>riley@example.com</td>
+                  <td>Editor</td>
+                  <td>Apr 19, 2024</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Zebra Table -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Zebra Striped</h2>
+        <div class="bg-base-100 rounded-2xl shadow overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="table table-zebra">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Category</th>
+                  <th>Price</th>
+                  <th>Stock</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="font-medium">Wireless Headphones</td>
+                  <td>Electronics</td>
+                  <td>$89.99</td>
+                  <td>142</td>
+                  <td><span class="badge badge-success badge-sm">In Stock</span></td>
+                </tr>
+                <tr>
+                  <td class="font-medium">Mechanical Keyboard</td>
+                  <td>Peripherals</td>
+                  <td>$129.00</td>
+                  <td>38</td>
+                  <td><span class="badge badge-success badge-sm">In Stock</span></td>
+                </tr>
+                <tr>
+                  <td class="font-medium">USB-C Hub</td>
+                  <td>Accessories</td>
+                  <td>$49.99</td>
+                  <td>0</td>
+                  <td><span class="badge badge-error badge-sm">Out of Stock</span></td>
+                </tr>
+                <tr>
+                  <td class="font-medium">4K Monitor</td>
+                  <td>Displays</td>
+                  <td>$449.00</td>
+                  <td>7</td>
+                  <td><span class="badge badge-warning badge-sm">Low Stock</span></td>
+                </tr>
+                <tr>
+                  <td class="font-medium">Laptop Stand</td>
+                  <td>Accessories</td>
+                  <td>$34.99</td>
+                  <td>215</td>
+                  <td><span class="badge badge-success badge-sm">In Stock</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Table with Checkboxes + Actions -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Selectable Rows with Actions</h2>
+        <div class="bg-base-100 rounded-2xl shadow overflow-hidden">
+          <!-- Toolbar -->
+          <div class="px-4 py-3 border-b border-base-200 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="text-sm text-base-content/60">3 of 5 selected</span>
+              <button class="btn btn-sm btn-error btn-outline gap-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6"/></svg>
+                Delete
+              </button>
+              <button class="btn btn-sm btn-ghost gap-1">Export</button>
+            </div>
+            <div class="flex items-center gap-2">
+              <input type="text" placeholder="Search…" class="input input-bordered input-sm w-48" />
+            </div>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th><input type="checkbox" class="checkbox checkbox-sm" checked /></th>
+                  <th>Task</th>
+                  <th>Assignee</th>
+                  <th>Priority</th>
+                  <th>Due Date</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-primary/5">
+                  <td><input type="checkbox" class="checkbox checkbox-sm checkbox-primary" checked /></td>
+                  <td>
+                    <div class="font-medium">Redesign landing page</div>
+                    <div class="text-xs text-base-content/50">Updated 2 hours ago</div>
+                  </td>
+                  <td>
+                    <div class="flex items-center gap-2">
+                      <div class="avatar placeholder">
+                        <div class="bg-primary text-primary-content rounded-full w-6 text-xs"><span>AM</span></div>
+                      </div>
+                      <span class="text-sm">Alex M.</span>
+                    </div>
+                  </td>
+                  <td><span class="badge badge-error badge-sm">High</span></td>
+                  <td class="text-sm">May 30</td>
+                  <td>
+                    <div class="flex gap-1">
+                      <button class="btn btn-ghost btn-xs">Edit</button>
+                      <button class="btn btn-ghost btn-xs text-error">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="bg-primary/5">
+                  <td><input type="checkbox" class="checkbox checkbox-sm checkbox-primary" checked /></td>
+                  <td>
+                    <div class="font-medium">Write API documentation</div>
+                    <div class="text-xs text-base-content/50">Updated yesterday</div>
+                  </td>
+                  <td>
+                    <div class="flex items-center gap-2">
+                      <div class="avatar placeholder">
+                        <div class="bg-secondary text-secondary-content rounded-full w-6 text-xs"><span>JL</span></div>
+                      </div>
+                      <span class="text-sm">Jordan L.</span>
+                    </div>
+                  </td>
+                  <td><span class="badge badge-warning badge-sm">Medium</span></td>
+                  <td class="text-sm">Jun 5</td>
+                  <td>
+                    <div class="flex gap-1">
+                      <button class="btn btn-ghost btn-xs">Edit</button>
+                      <button class="btn btn-ghost btn-xs text-error">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="bg-primary/5">
+                  <td><input type="checkbox" class="checkbox checkbox-sm checkbox-primary" checked /></td>
+                  <td>
+                    <div class="font-medium">Setup CI/CD pipeline</div>
+                    <div class="text-xs text-base-content/50">Updated 3 days ago</div>
+                  </td>
+                  <td>
+                    <div class="flex items-center gap-2">
+                      <div class="avatar placeholder">
+                        <div class="bg-accent text-accent-content rounded-full w-6 text-xs"><span>CK</span></div>
+                      </div>
+                      <span class="text-sm">Casey K.</span>
+                    </div>
+                  </td>
+                  <td><span class="badge badge-error badge-sm">High</span></td>
+                  <td class="text-sm">Jun 1</td>
+                  <td>
+                    <div class="flex gap-1">
+                      <button class="btn btn-ghost btn-xs">Edit</button>
+                      <button class="btn btn-ghost btn-xs text-error">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="checkbox checkbox-sm" /></td>
+                  <td>
+                    <div class="font-medium">User testing session</div>
+                    <div class="text-xs text-base-content/50">Updated 1 week ago</div>
+                  </td>
+                  <td>
+                    <div class="flex items-center gap-2">
+                      <div class="avatar placeholder">
+                        <div class="bg-neutral text-neutral-content rounded-full w-6 text-xs"><span>RC</span></div>
+                      </div>
+                      <span class="text-sm">Riley C.</span>
+                    </div>
+                  </td>
+                  <td><span class="badge badge-info badge-sm">Low</span></td>
+                  <td class="text-sm">Jun 15</td>
+                  <td>
+                    <div class="flex gap-1">
+                      <button class="btn btn-ghost btn-xs">Edit</button>
+                      <button class="btn btn-ghost btn-xs text-error">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="checkbox checkbox-sm" /></td>
+                  <td>
+                    <div class="font-medium">Performance audit</div>
+                    <div class="text-xs text-base-content/50">Updated 2 weeks ago</div>
+                  </td>
+                  <td>
+                    <div class="flex items-center gap-2">
+                      <div class="avatar placeholder">
+                        <div class="bg-info text-info-content rounded-full w-6 text-xs"><span>SP</span></div>
+                      </div>
+                      <span class="text-sm">Sam P.</span>
+                    </div>
+                  </td>
+                  <td><span class="badge badge-warning badge-sm">Medium</span></td>
+                  <td class="text-sm">Jun 20</td>
+                  <td>
+                    <div class="flex gap-1">
+                      <button class="btn btn-ghost btn-xs">Edit</button>
+                      <button class="btn btn-ghost btn-xs text-error">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Footer pagination -->
+          <div class="px-4 py-3 border-t border-base-200 flex items-center justify-between">
+            <span class="text-xs text-base-content/50">Showing 1–5 of 24 results</span>
+            <div class="join">
+              <button class="join-item btn btn-xs btn-ghost">«</button>
+              <button class="join-item btn btn-xs btn-active">1</button>
+              <button class="join-item btn btn-xs btn-ghost">2</button>
+              <button class="join-item btn btn-xs btn-ghost">3</button>
+              <button class="join-item btn btn-xs btn-ghost">»</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Compact Table -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Compact / Dense Table</h2>
+        <div class="bg-base-100 rounded-2xl shadow overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="table table-xs table-zebra">
+              <thead>
+                <tr>
+                  <th>Timestamp</th>
+                  <th>Event</th>
+                  <th>User</th>
+                  <th>IP Address</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="text-base-content/50">2024-06-01 09:23:14</td><td>Login</td><td>alex@example.com</td><td>192.168.1.1</td><td><span class="badge badge-success badge-xs">OK</span></td></tr>
+                <tr><td class="text-base-content/50">2024-06-01 09:45:02</td><td>Password change</td><td>jordan@example.com</td><td>10.0.0.4</td><td><span class="badge badge-success badge-xs">OK</span></td></tr>
+                <tr><td class="text-base-content/50">2024-06-01 10:12:39</td><td>Login attempt</td><td>unknown</td><td>203.0.113.5</td><td><span class="badge badge-error badge-xs">Failed</span></td></tr>
+                <tr><td class="text-base-content/50">2024-06-01 10:30:00</td><td>Export data</td><td>casey@example.com</td><td>192.168.1.7</td><td><span class="badge badge-success badge-xs">OK</span></td></tr>
+                <tr><td class="text-base-content/50">2024-06-01 11:05:18</td><td>Login attempt</td><td>unknown</td><td>185.220.101.3</td><td><span class="badge badge-error badge-xs">Failed</span></td></tr>
+                <tr><td class="text-base-content/50">2024-06-01 11:42:55</td><td>2FA enabled</td><td>riley@example.com</td><td>10.0.0.9</td><td><span class="badge badge-info badge-xs">Info</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

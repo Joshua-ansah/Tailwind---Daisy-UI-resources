@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms — Component Library</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="min-h-screen bg-base-200">
+    <header class="bg-base-100 border-b border-base-300 px-6 py-4 flex items-center gap-4">
+      <a href="/components/index.html" class="btn btn-ghost btn-sm gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Components
+      </a>
+      <span class="text-base-content/30">/</span>
+      <h1 class="font-bold text-base-content">Forms</h1>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-10 space-y-12">
+
+      <!-- Text Inputs -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Text Input States</h2>
+        <div class="bg-base-100 rounded-2xl p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="form-control">
+            <label class="label"><span class="label-text">Default</span></label>
+            <input type="text" placeholder="Type here…" class="input input-bordered w-full" />
+          </div>
+          <div class="form-control">
+            <label class="label"><span class="label-text">With value</span></label>
+            <input type="text" value="Jane Doe" class="input input-bordered w-full" />
+          </div>
+          <div class="form-control">
+            <label class="label"><span class="label-text">Disabled</span></label>
+            <input type="text" placeholder="Disabled…" class="input input-bordered w-full" disabled />
+          </div>
+          <div class="form-control">
+            <label class="label"><span class="label-text text-error">Error state</span></label>
+            <input type="text" value="bad-email" class="input input-bordered input-error w-full" />
+            <label class="label"><span class="label-text-alt text-error">Please enter a valid email.</span></label>
+          </div>
+          <div class="form-control">
+            <label class="label"><span class="label-text">Ghost (no border)</span></label>
+            <input type="text" placeholder="Ghost input" class="input input-ghost w-full" />
+          </div>
+          <div class="form-control">
+            <label class="label"><span class="label-text">With icon prefix</span></label>
+            <label class="input input-bordered flex items-center gap-2 w-full">
+              <svg class="w-4 h-4 text-base-content/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0A7 7 0 1016.65 16.65z"/></svg>
+              <input type="search" placeholder="Search…" class="grow" />
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- Input Sizes -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Input Sizes</h2>
+        <div class="bg-base-100 rounded-2xl p-6 flex flex-col gap-3 max-w-sm">
+          <input type="text" placeholder="Extra small (xs)" class="input input-bordered input-xs w-full" />
+          <input type="text" placeholder="Small (sm)" class="input input-bordered input-sm w-full" />
+          <input type="text" placeholder="Medium (default)" class="input input-bordered w-full" />
+          <input type="text" placeholder="Large (lg)" class="input input-bordered input-lg w-full" />
+        </div>
+      </section>
+
+      <!-- Speciality Inputs -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Speciality Inputs</h2>
+        <div class="bg-base-100 rounded-2xl p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="form-control">
+            <label class="label"><span class="label-text">Email</span></label>
+            <input type="email" placeholder="you@example.com" class="input input-bordered w-full" />
+          </div>
+          <div class="form-control">
+            <label class="label"><span class="label-text">Password</span></label>
+            <input type="password" placeholder="••••••••" class="input input-bordered w-full" />
+          </div>
+          <div class="form-control">
+            <label class="label"><span class="label-text">Date</span></label>
+            <input type="date" class="input input-bordered w-full" />
+          </div>
+          <div class="form-control">
+            <label class="label"><span class="label-text">Number</span></label>
+            <input type="number" placeholder="0" min="0" class="input input-bordered w-full" />
+          </div>
+          <div class="form-control md:col-span-2">
+            <label class="label"><span class="label-text">Select</span></label>
+            <select class="select select-bordered w-full">
+              <option disabled selected>Pick an option…</option>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+          <div class="form-control md:col-span-2">
+            <label class="label"><span class="label-text">Textarea</span></label>
+            <textarea class="textarea textarea-bordered w-full" rows="4" placeholder="Enter a long description…"></textarea>
+            <label class="label"><span class="label-text-alt text-base-content/50">Max 500 characters</span></label>
+          </div>
+        </div>
+      </section>
+
+      <!-- Checkboxes & Radios -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Checkboxes & Radios</h2>
+        <div class="bg-base-100 rounded-2xl p-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Checkboxes -->
+          <div>
+            <p class="text-sm font-medium mb-3">Checkboxes</p>
+            <div class="flex flex-col gap-2">
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="checkbox checkbox-primary" checked />
+                <span class="label-text">Option A (checked)</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="checkbox checkbox-secondary" />
+                <span class="label-text">Option B</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="checkbox checkbox-success" checked />
+                <span class="label-text">Option C (success)</span>
+              </label>
+              <label class="flex items-center gap-3 opacity-50 cursor-not-allowed">
+                <input type="checkbox" class="checkbox" disabled />
+                <span class="label-text">Disabled</span>
+              </label>
+            </div>
+          </div>
+          <!-- Radios -->
+          <div>
+            <p class="text-sm font-medium mb-3">Radio Buttons</p>
+            <div class="flex flex-col gap-2">
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="radio" name="radio-demo" class="radio radio-primary" checked />
+                <span class="label-text">Option 1 (selected)</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="radio" name="radio-demo" class="radio radio-primary" />
+                <span class="label-text">Option 2</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="radio" name="radio-demo" class="radio radio-accent" />
+                <span class="label-text">Option 3 (accent)</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Toggle, Range & File -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Toggle, Range & File</h2>
+        <div class="bg-base-100 rounded-2xl p-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <p class="text-sm font-medium mb-3">Toggle Switches</p>
+            <div class="flex flex-col gap-3">
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="toggle toggle-primary" checked />
+                <span class="label-text">Enabled</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="toggle toggle-success" />
+                <span class="label-text">Off</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer opacity-50 cursor-not-allowed">
+                <input type="checkbox" class="toggle" disabled />
+                <span class="label-text">Disabled</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-control">
+            <p class="text-sm font-medium mb-3">Range Slider</p>
+            <input type="range" min="0" max="100" value="40" class="range range-primary" />
+            <div class="flex justify-between text-xs text-base-content/50 mt-1 px-1">
+              <span>0</span><span>50</span><span>100</span>
+            </div>
+          </div>
+          <div class="form-control">
+            <p class="text-sm font-medium mb-3">File Upload</p>
+            <input type="file" class="file-input file-input-bordered w-full" />
+            <label class="label"><span class="label-text-alt text-base-content/50">PDF, PNG up to 10MB</span></label>
+          </div>
+        </div>
+      </section>
+
+      <!-- Complete Form Example -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Complete Form Example</h2>
+        <div class="bg-base-100 rounded-2xl p-8 max-w-2xl">
+          <h3 class="font-bold text-xl mb-1">Create Account</h3>
+          <p class="text-sm text-base-content/50 mb-6">Fill in your details to get started.</p>
+          <form class="space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="form-control">
+                <label class="label pb-1"><span class="label-text font-medium">First Name</span></label>
+                <input type="text" placeholder="Jane" class="input input-bordered w-full" />
+              </div>
+              <div class="form-control">
+                <label class="label pb-1"><span class="label-text font-medium">Last Name</span></label>
+                <input type="text" placeholder="Doe" class="input input-bordered w-full" />
+              </div>
+            </div>
+            <div class="form-control">
+              <label class="label pb-1"><span class="label-text font-medium">Email</span></label>
+              <input type="email" placeholder="jane@example.com" class="input input-bordered w-full" />
+            </div>
+            <div class="form-control">
+              <label class="label pb-1"><span class="label-text font-medium">Password</span></label>
+              <input type="password" placeholder="••••••••" class="input input-bordered w-full" />
+              <label class="label pt-1"><span class="label-text-alt text-base-content/50">Min 8 characters</span></label>
+            </div>
+            <label class="flex items-center gap-3 cursor-pointer">
+              <input type="checkbox" class="checkbox checkbox-primary" />
+              <span class="text-sm">I agree to the <a href="#" class="link link-primary">Terms & Conditions</a></span>
+            </label>
+            <div class="flex gap-3 pt-2">
+              <button type="submit" class="btn btn-primary flex-1">Create Account</button>
+              <button type="reset" class="btn btn-ghost">Reset</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

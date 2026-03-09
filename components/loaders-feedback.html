@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loaders & Feedback — Component Library</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="min-h-screen bg-base-200">
+    <header class="bg-base-100 border-b border-base-300 px-6 py-4 flex items-center gap-4">
+      <a href="/components/index.html" class="btn btn-ghost btn-sm gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Components
+      </a>
+      <span class="text-base-content/30">/</span>
+      <h1 class="font-bold text-base-content">Loaders & Feedback</h1>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-10 space-y-12">
+
+      <!-- Loading Spinners -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Loading — Spinner</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-8 items-end">
+          <div class="flex flex-col items-center gap-2">
+            <span class="loading loading-spinner loading-xs"></span>
+            <span class="text-xs text-base-content/40">xs</span>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <span class="loading loading-spinner loading-sm"></span>
+            <span class="text-xs text-base-content/40">sm</span>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <span class="loading loading-spinner loading-md"></span>
+            <span class="text-xs text-base-content/40">md</span>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <span class="loading loading-spinner loading-lg text-primary"></span>
+            <span class="text-xs text-base-content/40">lg primary</span>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <span class="loading loading-spinner loading-lg text-secondary"></span>
+            <span class="text-xs text-base-content/40">lg secondary</span>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <span class="loading loading-spinner loading-lg text-accent"></span>
+            <span class="text-xs text-base-content/40">lg accent</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Loading Variants -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Loading — All Variants</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
+          <div class="flex flex-col items-center gap-3">
+            <span class="loading loading-spinner loading-lg text-primary"></span>
+            <span class="text-xs text-base-content/40">Spinner</span>
+          </div>
+          <div class="flex flex-col items-center gap-3">
+            <span class="loading loading-dots loading-lg text-secondary"></span>
+            <span class="text-xs text-base-content/40">Dots</span>
+          </div>
+          <div class="flex flex-col items-center gap-3">
+            <span class="loading loading-ring loading-lg text-accent"></span>
+            <span class="text-xs text-base-content/40">Ring</span>
+          </div>
+          <div class="flex flex-col items-center gap-3">
+            <span class="loading loading-bars loading-lg text-info"></span>
+            <span class="text-xs text-base-content/40">Bars</span>
+          </div>
+          <div class="flex flex-col items-center gap-3">
+            <span class="loading loading-ball loading-lg text-success"></span>
+            <span class="text-xs text-base-content/40">Ball</span>
+          </div>
+          <div class="flex flex-col items-center gap-3">
+            <span class="loading loading-infinity loading-lg text-warning"></span>
+            <span class="text-xs text-base-content/40">Infinity</span>
+          </div>
+          <div class="flex flex-col items-center gap-3">
+            <button class="btn btn-primary" disabled>
+              <span class="loading loading-spinner loading-sm"></span>
+              Saving…
+            </button>
+            <span class="text-xs text-base-content/40">In button</span>
+          </div>
+          <div class="flex flex-col items-center gap-3">
+            <div class="flex flex-col items-center gap-2">
+              <span class="loading loading-spinner loading-md"></span>
+              <span class="text-sm text-base-content/60">Loading data…</span>
+            </div>
+            <span class="text-xs text-base-content/40">With label</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Progress Bars -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Progress Bars</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow space-y-5">
+          <div>
+            <div class="flex justify-between text-xs text-base-content/50 mb-1">
+              <span>Upload progress</span><span>72%</span>
+            </div>
+            <progress class="progress progress-primary w-full" value="72" max="100"></progress>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs text-base-content/50 mb-1">
+              <span>Secondary</span><span>40%</span>
+            </div>
+            <progress class="progress progress-secondary w-full" value="40" max="100"></progress>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs text-base-content/50 mb-1">
+              <span>Success</span><span>90%</span>
+            </div>
+            <progress class="progress progress-success w-full" value="90" max="100"></progress>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs text-base-content/50 mb-1">
+              <span>Warning</span><span>55%</span>
+            </div>
+            <progress class="progress progress-warning w-full" value="55" max="100"></progress>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs text-base-content/50 mb-1">
+              <span>Error</span><span>25%</span>
+            </div>
+            <progress class="progress progress-error w-full" value="25" max="100"></progress>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs text-base-content/50 mb-1">
+              <span>Indeterminate (animated)</span>
+            </div>
+            <progress class="progress progress-info w-full"></progress>
+          </div>
+        </div>
+      </section>
+
+      <!-- Radial Progress -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Radial Progress</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-8 items-center">
+          <div class="radial-progress text-primary" style="--value:70;" role="progressbar">70%</div>
+          <div class="radial-progress text-secondary" style="--value:40; --size:6rem; --thickness:4px;" role="progressbar">40%</div>
+          <div class="radial-progress text-accent" style="--value:95; --size:8rem; --thickness:12px;" role="progressbar">95%</div>
+          <div class="radial-progress text-success" style="--value:25; --size:5rem;" role="progressbar">25%</div>
+          <div class="flex flex-col items-center gap-2">
+            <div class="radial-progress text-warning" style="--value:60; --size:7rem;" role="progressbar">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <span class="text-xs text-base-content/40">With icon</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skeleton Loaders -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Skeleton Loaders</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Card skeleton -->
+          <div>
+            <p class="text-xs text-base-content/40 uppercase tracking-widest mb-3">Card Skeleton</p>
+            <div class="card bg-base-200 shadow-inner">
+              <div class="skeleton h-48 w-full rounded-t-2xl rounded-b-none"></div>
+              <div class="card-body gap-3">
+                <div class="skeleton h-4 w-3/4 rounded"></div>
+                <div class="skeleton h-3 w-full rounded"></div>
+                <div class="skeleton h-3 w-5/6 rounded"></div>
+                <div class="skeleton h-3 w-4/6 rounded"></div>
+                <div class="flex gap-2 mt-2">
+                  <div class="skeleton h-8 w-24 rounded-lg"></div>
+                  <div class="skeleton h-8 w-20 rounded-lg"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- List skeleton -->
+          <div>
+            <p class="text-xs text-base-content/40 uppercase tracking-widest mb-3">List Skeleton</p>
+            <div class="space-y-4">
+              <div class="flex items-center gap-4">
+                <div class="skeleton w-12 h-12 rounded-full shrink-0"></div>
+                <div class="flex flex-col gap-2 flex-1">
+                  <div class="skeleton h-4 w-3/4"></div>
+                  <div class="skeleton h-3 w-1/2"></div>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="skeleton w-12 h-12 rounded-full shrink-0"></div>
+                <div class="flex flex-col gap-2 flex-1">
+                  <div class="skeleton h-4 w-2/3"></div>
+                  <div class="skeleton h-3 w-5/12"></div>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="skeleton w-12 h-12 rounded-full shrink-0"></div>
+                <div class="flex flex-col gap-2 flex-1">
+                  <div class="skeleton h-4 w-4/5"></div>
+                  <div class="skeleton h-3 w-7/12"></div>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="skeleton w-12 h-12 rounded-full shrink-0"></div>
+                <div class="flex flex-col gap-2 flex-1">
+                  <div class="skeleton h-4 w-3/5"></div>
+                  <div class="skeleton h-3 w-4/12"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Rating Stars -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Rating</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow space-y-5">
+          <div class="flex items-center gap-4">
+            <div class="rating">
+              <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" checked />
+              <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+            </div>
+            <span class="text-sm text-base-content/60">3 out of 5</span>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div class="rating rating-lg">
+              <input type="radio" name="rating-2" class="mask mask-star bg-warning" />
+              <input type="radio" name="rating-2" class="mask mask-star bg-warning" />
+              <input type="radio" name="rating-2" class="mask mask-star bg-warning" />
+              <input type="radio" name="rating-2" class="mask mask-star bg-warning" />
+              <input type="radio" name="rating-2" class="mask mask-star bg-warning" checked />
+            </div>
+            <span class="text-sm text-base-content/60">5 out of 5 — Large</span>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div class="rating rating-sm gap-1">
+              <input type="radio" name="rating-3" class="mask mask-heart bg-rose-400" />
+              <input type="radio" name="rating-3" class="mask mask-heart bg-rose-400" checked />
+              <input type="radio" name="rating-3" class="mask mask-heart bg-rose-400" />
+              <input type="radio" name="rating-3" class="mask mask-heart bg-rose-400" />
+              <input type="radio" name="rating-3" class="mask mask-heart bg-rose-400" />
+            </div>
+            <span class="text-sm text-base-content/60">Heart mask — Small</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tooltips -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Tooltips</h2>
+        <div class="bg-base-100 rounded-2xl p-8 shadow flex flex-wrap gap-6 items-center justify-center">
+          <div class="tooltip" data-tip="Default tooltip on top">
+            <button class="btn btn-sm">Top (default)</button>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="Appears below the element">
+            <button class="btn btn-sm">Bottom</button>
+          </div>
+          <div class="tooltip tooltip-left" data-tip="Appears to the left">
+            <button class="btn btn-sm">Left</button>
+          </div>
+          <div class="tooltip tooltip-right" data-tip="Appears to the right">
+            <button class="btn btn-sm">Right</button>
+          </div>
+          <div class="tooltip tooltip-primary" data-tip="Primary colour variant">
+            <button class="btn btn-primary btn-sm">Primary</button>
+          </div>
+          <div class="tooltip tooltip-secondary" data-tip="Secondary colour variant">
+            <button class="btn btn-secondary btn-sm">Secondary</button>
+          </div>
+          <div class="tooltip tooltip-error" data-tip="Use for destructive actions">
+            <button class="btn btn-error btn-sm">Error</button>
+          </div>
+          <div class="tooltip tooltip-open tooltip-success" data-tip="Always visible">
+            <button class="btn btn-success btn-sm btn-outline">Always open</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

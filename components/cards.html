@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards — Component Library</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="min-h-screen bg-base-200">
+    <header class="bg-base-100 border-b border-base-300 px-6 py-4 flex items-center gap-4">
+      <a href="/components/index.html" class="btn btn-ghost btn-sm gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Components
+      </a>
+      <span class="text-base-content/30">/</span>
+      <h1 class="font-bold text-base-content">Cards</h1>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-10 space-y-12">
+
+      <!-- Basic Cards -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Basic Cards</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Plain -->
+          <div class="card bg-base-100 shadow">
+            <div class="card-body">
+              <h3 class="card-title">Plain Card</h3>
+              <p class="text-sm text-base-content/60">Basic card with title, body text, and an action button.</p>
+              <div class="card-actions justify-end mt-2">
+                <button class="btn btn-primary btn-sm">Action</button>
+              </div>
+            </div>
+          </div>
+          <!-- Bordered -->
+          <div class="card bg-base-100 border border-base-300">
+            <div class="card-body">
+              <h3 class="card-title">Bordered Card</h3>
+              <p class="text-sm text-base-content/60">Card with explicit border instead of shadow.</p>
+              <div class="card-actions justify-end mt-2">
+                <button class="btn btn-outline btn-sm">Learn more</button>
+              </div>
+            </div>
+          </div>
+          <!-- Compact -->
+          <div class="card card-compact bg-base-100 shadow">
+            <div class="card-body">
+              <h3 class="card-title text-base">Compact Card</h3>
+              <p class="text-sm text-base-content/60">Less padding variant for dense UIs.</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-ghost btn-xs">More →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Image Cards -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Image Cards</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Top image -->
+          <div class="card bg-base-100 shadow overflow-hidden">
+            <figure class="h-40 bg-gradient-to-br from-primary to-secondary"></figure>
+            <div class="card-body">
+              <h3 class="card-title">Image Top</h3>
+              <p class="text-sm text-base-content/60">Card with image or gradient above the content.</p>
+              <div class="card-actions justify-end"><button class="btn btn-primary btn-sm">View</button></div>
+            </div>
+          </div>
+          <!-- Bottom image -->
+          <div class="card bg-base-100 shadow overflow-hidden">
+            <div class="card-body">
+              <h3 class="card-title">Image Bottom</h3>
+              <p class="text-sm text-base-content/60">Content first, media below.</p>
+            </div>
+            <figure class="h-32 bg-gradient-to-br from-accent to-info"></figure>
+          </div>
+          <!-- Overlay text -->
+          <div class="card bg-base-100 shadow overflow-hidden image-full">
+            <figure class="h-48 bg-gradient-to-br from-neutral to-base-content"></figure>
+            <div class="card-body justify-end">
+              <h3 class="card-title text-white">Overlay Card</h3>
+              <p class="text-sm text-white/70">Text overlaid on image.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Horizontal Card -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Horizontal Card</h2>
+        <div class="card card-side bg-base-100 shadow max-w-xl">
+          <figure class="w-36 shrink-0 bg-gradient-to-b from-info to-primary"></figure>
+          <div class="card-body">
+            <h3 class="card-title">Horizontal Media Card</h3>
+            <p class="text-sm text-base-content/60">Media on the left, content on the right. Great for articles or search results.</p>
+            <div class="card-actions"><button class="btn btn-ghost btn-sm">Read more →</button></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Card -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Pricing Cards</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="card bg-base-100 shadow border border-base-300">
+            <div class="card-body items-center text-center gap-3">
+              <span class="badge badge-outline">Starter</span>
+              <p class="text-4xl font-extrabold">$9<span class="text-xl font-normal text-base-content/50">/mo</span></p>
+              <ul class="text-sm text-base-content/70 space-y-1 text-left w-full">
+                <li class="flex items-center gap-2"><span class="text-success">✓</span> 5 projects</li>
+                <li class="flex items-center gap-2"><span class="text-success">✓</span> 10 GB storage</li>
+                <li class="flex items-center gap-2 line-through opacity-40"><span>✗</span> Team collaboration</li>
+              </ul>
+              <div class="card-actions w-full mt-2"><button class="btn btn-outline w-full">Get started</button></div>
+            </div>
+          </div>
+          <div class="card bg-primary text-primary-content shadow">
+            <div class="card-body items-center text-center gap-3">
+              <span class="badge badge-outline badge-primary-content">Pro <span class="ml-1 badge badge-sm bg-primary-content text-primary">Popular</span></span>
+              <p class="text-4xl font-extrabold">$29<span class="text-xl font-normal opacity-70">/mo</span></p>
+              <ul class="text-sm opacity-80 space-y-1 text-left w-full">
+                <li class="flex items-center gap-2"><span>✓</span> Unlimited projects</li>
+                <li class="flex items-center gap-2"><span>✓</span> 100 GB storage</li>
+                <li class="flex items-center gap-2"><span>✓</span> Team collaboration</li>
+              </ul>
+              <div class="card-actions w-full mt-2"><button class="btn btn-primary-content w-full text-primary">Get Pro</button></div>
+            </div>
+          </div>
+          <div class="card bg-base-100 shadow border border-base-300">
+            <div class="card-body items-center text-center gap-3">
+              <span class="badge badge-outline">Enterprise</span>
+              <p class="text-4xl font-extrabold">Custom</p>
+              <ul class="text-sm text-base-content/70 space-y-1 text-left w-full">
+                <li class="flex items-center gap-2"><span class="text-success">✓</span> Unlimited everything</li>
+                <li class="flex items-center gap-2"><span class="text-success">✓</span> Dedicated support</li>
+                <li class="flex items-center gap-2"><span class="text-success">✓</span> SLA guarantee</li>
+              </ul>
+              <div class="card-actions w-full mt-2"><button class="btn btn-outline w-full">Contact sales</button></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Profile Card -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Profile Card</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-xl">
+          <div class="card bg-base-100 shadow">
+            <div class="card-body items-center text-center gap-3">
+              <div class="avatar">
+                <div class="w-16 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                  <span class="text-2xl font-bold text-white">JD</span>
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg">Jane Doe</h3>
+                <p class="text-sm text-base-content/50">Product Designer</p>
+              </div>
+              <div class="flex gap-3">
+                <span class="badge badge-primary">Figma</span>
+                <span class="badge badge-secondary">UX</span>
+                <span class="badge badge-accent">Strategy</span>
+              </div>
+              <div class="flex gap-2 w-full mt-2">
+                <button class="btn btn-primary btn-sm flex-1">Follow</button>
+                <button class="btn btn-ghost btn-sm flex-1">Message</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Glass Card -->
+          <div class="relative rounded-2xl overflow-hidden p-0.5">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-accent"></div>
+            <div class="relative card glass">
+              <div class="card-body">
+                <h3 class="card-title text-white">Glass Card</h3>
+                <p class="text-sm text-white/70">Rendered on a gradient background to show the frosted glass effect.</p>
+                <div class="card-actions"><button class="btn btn-sm glass">Action</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

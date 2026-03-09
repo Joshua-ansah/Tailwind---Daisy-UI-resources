@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Front-end Assets — Multi Column Layout</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="min-h-screen bg-base-200">
+
+    <!-- Top Nav -->
+    <header class="bg-base-100 border-b border-base-300 px-6 py-4 flex items-center justify-between">
+      <div>
+        <h1 class="text-xl font-bold text-base-content">Front-end Assets</h1>
+        <p class="text-xs text-base-content/40 mt-0.5">TailwindCSS v4 + DaisyUI</p>
+      </div>
+      <a href="/components/index.html" class="btn btn-primary btn-sm gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+        Component Library
+      </a>
+    </header>
+
+    <div class="max-w-5xl mx-auto px-6 py-10 space-y-12">
+
+      <!-- Page Header -->
+      <div class="text-center py-6">
+        <h2 class="text-4xl font-extrabold text-base-content tracking-tight">Multi Column Layout</h2>
+        <p class="mt-2 text-base-content/50">Responsive multi-column layout demos built with Tailwind CSS &amp; DaisyUI</p>
+      </div>
+
+      <!-- 3-Column Grid -->
+      <section>
+        <h2 class="text-lg font-semibold text-base-content mb-4">3-Column Grid</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="card bg-base-100 shadow">
+            <div class="card-body">
+              <h3 class="card-title text-primary">Column One</h3>
+              <p class="text-sm text-base-content/60">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+            </div>
+          </div>
+          <div class="card bg-base-100 shadow">
+            <div class="card-body">
+              <h3 class="card-title text-primary">Column Two</h3>
+              <p class="text-sm text-base-content/60">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            </div>
+          </div>
+          <div class="card bg-base-100 shadow">
+            <div class="card-body">
+              <h3 class="card-title text-primary">Column Three</h3>
+              <p class="text-sm text-base-content/60">Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis molestie.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sidebar + Main Content Layout -->
+      <section>
+        <h2 class="text-lg font-semibold text-base-content mb-4">Sidebar + Main Content</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+
+          <!-- Sidebar -->
+          <aside class="md:col-span-1 bg-primary text-primary-content rounded-2xl shadow p-6">
+            <h3 class="font-bold mb-4">Sidebar</h3>
+            <nav class="space-y-1 text-sm">
+              <a href="#" class="block hover:bg-primary-focus rounded px-2 py-1.5 transition">Home</a>
+              <a href="#" class="block hover:bg-primary-focus rounded px-2 py-1.5 transition">About</a>
+              <a href="#" class="block hover:bg-primary-focus rounded px-2 py-1.5 transition">Projects</a>
+              <a href="#" class="block hover:bg-primary-focus rounded px-2 py-1.5 transition">Contact</a>
+            </nav>
+          </aside>
+
+          <!-- Main Content -->
+          <div class="md:col-span-3 card bg-base-100 shadow">
+            <div class="card-body">
+              <h3 class="card-title">Main Content Area</h3>
+              <p class="text-sm text-base-content/60">This is the main content area spanning 3 of 4 columns. It's great for article-style layouts where a sidebar provides navigation or supplementary content.</p>
+              <p class="text-sm text-base-content/60 mt-2">Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 4-Column Card Grid -->
+      <section>
+        <h2 class="text-lg font-semibold text-base-content mb-4">4-Column Card Grid</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="card bg-base-100 shadow overflow-hidden">
+            <div class="h-32 bg-gradient-to-br from-pink-400 to-purple-500"></div>
+            <div class="card-body p-4">
+              <h4 class="font-bold">Card Title 1</h4>
+              <p class="text-sm text-base-content/50">Short description goes here.</p>
+            </div>
+          </div>
+          <div class="card bg-base-100 shadow overflow-hidden">
+            <div class="h-32 bg-gradient-to-br from-yellow-400 to-orange-500"></div>
+            <div class="card-body p-4">
+              <h4 class="font-bold">Card Title 2</h4>
+              <p class="text-sm text-base-content/50">Short description goes here.</p>
+            </div>
+          </div>
+          <div class="card bg-base-100 shadow overflow-hidden">
+            <div class="h-32 bg-gradient-to-br from-green-400 to-teal-500"></div>
+            <div class="card-body p-4">
+              <h4 class="font-bold">Card Title 3</h4>
+              <p class="text-sm text-base-content/50">Short description goes here.</p>
+            </div>
+          </div>
+          <div class="card bg-base-100 shadow overflow-hidden">
+            <div class="h-32 bg-gradient-to-br from-blue-400 to-cyan-500"></div>
+            <div class="card-body p-4">
+              <h4 class="font-bold">Card Title 4</h4>
+              <p class="text-sm text-base-content/50">Short description goes here.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </body>
+</html>
