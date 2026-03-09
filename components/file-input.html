@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Input — Component Library</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="min-h-screen bg-base-200">
+    <header class="bg-base-100 border-b border-base-300 px-6 py-4 flex items-center gap-4">
+      <a href="/components/index.html" class="btn btn-ghost btn-sm gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Components
+      </a>
+      <span class="text-base-content/30">/</span>
+      <h1 class="font-bold text-base-content">File Input</h1>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-10 space-y-12">
+
+      <!-- Basic -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">File Input</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-4 items-start">
+          <input type="file" class="file-input" />
+        </div>
+      </section>
+
+      <!-- Ghost -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Ghost Style</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-4 items-start">
+          <input type="file" class="file-input file-input-ghost" />
+        </div>
+      </section>
+
+      <!-- With fieldset and label -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">With Fieldset and Label</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-8 items-start">
+          <fieldset class="fieldset">
+            <legend class="fieldset-legend">Pick a file</legend>
+            <input type="file" class="file-input" />
+            <label class="label">Max size 2MB</label>
+          </fieldset>
+
+          <fieldset class="fieldset bg-base-200 border border-base-300 rounded-box p-4">
+            <legend class="fieldset-legend">Profile photo</legend>
+            <input type="file" class="file-input file-input-primary" accept="image/*" />
+            <label class="label">JPG, PNG or GIF — max 5MB</label>
+          </fieldset>
+        </div>
+      </section>
+
+      <!-- Sizes -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Sizes</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow">
+          <div class="flex flex-col gap-4 w-full max-w-lg">
+            <div class="flex items-center gap-4">
+              <span class="text-xs text-base-content/50 w-6">xs</span>
+              <input type="file" class="file-input file-input-xs flex-1" />
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-xs text-base-content/50 w-6">sm</span>
+              <input type="file" class="file-input file-input-sm flex-1" />
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-xs text-base-content/50 w-6">md</span>
+              <input type="file" class="file-input file-input-md flex-1" />
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-xs text-base-content/50 w-6">lg</span>
+              <input type="file" class="file-input file-input-lg flex-1" />
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-xs text-base-content/50 w-6">xl</span>
+              <input type="file" class="file-input file-input-xl flex-1" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Colors -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Colors</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow">
+          <div class="grid gap-3 max-w-lg">
+            <input type="file" class="file-input file-input-primary" />
+            <input type="file" class="file-input file-input-secondary" />
+            <input type="file" class="file-input file-input-accent" />
+            <input type="file" class="file-input file-input-neutral" />
+            <input type="file" class="file-input file-input-info" />
+            <input type="file" class="file-input file-input-success" />
+            <input type="file" class="file-input file-input-warning" />
+            <input type="file" class="file-input file-input-error" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Disabled -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Disabled</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-4 items-start">
+          <input type="file" class="file-input" disabled />
+        </div>
+      </section>
+
+      <!-- Drag-and-drop style (custom) -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Drag &amp; Drop Upload Area</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow">
+          <label
+            id="drop-zone"
+            class="flex flex-col items-center justify-center w-full max-w-lg h-40 border-2 border-dashed border-base-300 rounded-box cursor-pointer hover:border-primary hover:bg-primary/5 transition-colors"
+          >
+            <svg class="w-10 h-10 text-base-content/30 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+            <p class="text-sm text-base-content/50">Drop files here or <span class="text-primary font-medium">browse</span></p>
+            <p class="text-xs text-base-content/40 mt-1">PNG, JPG, PDF up to 10MB</p>
+            <input type="file" class="hidden" multiple />
+          </label>
+          <p id="drop-status" class="text-sm text-base-content/50 mt-3 italic">No file chosen</p>
+        </div>
+      </section>
+
+    </main>
+
+    <script>
+      const dropZone = document.getElementById('drop-zone');
+      const dropStatus = document.getElementById('drop-status');
+      const fileInput = dropZone.querySelector('input[type="file"]');
+
+      fileInput.addEventListener('change', () => {
+        const files = [...fileInput.files];
+        if (files.length) {
+          dropStatus.textContent = files.map(f => f.name).join(', ');
+          dropStatus.classList.remove('italic', 'text-base-content/50');
+          dropStatus.classList.add('font-medium', 'text-primary');
+        }
+      });
+
+      dropZone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        dropZone.classList.add('border-primary', 'bg-primary/5');
+      });
+
+      dropZone.addEventListener('dragleave', () => {
+        dropZone.classList.remove('bg-primary/5');
+      });
+
+      dropZone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        dropZone.classList.remove('bg-primary/5');
+        const files = [...e.dataTransfer.files];
+        if (files.length) {
+          dropStatus.textContent = files.map(f => f.name).join(', ');
+          dropStatus.classList.remove('italic', 'text-base-content/50');
+          dropStatus.classList.add('font-medium', 'text-primary');
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validator — Component Library</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="min-h-screen bg-base-200">
+    <header class="bg-base-100 border-b border-base-300 px-6 py-4 flex items-center gap-4">
+      <a href="/components/index.html" class="btn btn-ghost btn-sm gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Components
+      </a>
+      <span class="text-base-content/30">/</span>
+      <h1 class="font-bold text-base-content">Validator</h1>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-10 space-y-12">
+
+      <!-- Basic email validator -->
+      <section>
+        <h2 class="text-lg font-semibold mb-1">Email Validator</h2>
+        <p class="text-sm text-base-content/50 mb-4">Typing a valid email turns the input green; invalid turns it red.</p>
+        <div class="bg-base-100 rounded-2xl p-6 shadow">
+          <form class="w-full max-w-xs" novalidate>
+            <input class="input validator" type="email" required placeholder="mail@site.com" autocomplete="off" />
+            <div class="validator-hint">Enter valid email address</div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Password validator -->
+      <section>
+        <h2 class="text-lg font-semibold mb-1">Password Validator</h2>
+        <p class="text-sm text-base-content/50 mb-4">Hint appears below while the password doesn't match the pattern.</p>
+        <div class="bg-base-100 rounded-2xl p-6 shadow">
+          <form class="w-full max-w-xs" novalidate>
+            <input type="password" class="input validator" required placeholder="Password" minlength="8"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              title="Must be more than 8 characters, including number, lowercase letter, uppercase letter" />
+            <p class="validator-hint">
+              Must be more than 8 characters, including
+              <br />At least one number
+              <br />At least one lowercase letter
+              <br />At least one uppercase letter
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <!-- Username validator -->
+      <section>
+        <h2 class="text-lg font-semibold mb-1">Username Validator</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow">
+          <form class="w-full max-w-xs" novalidate>
+            <input type="text" class="input validator" required placeholder="Username"
+              pattern="[A-Za-z][A-Za-z0-9\-]*" minlength="3" maxlength="30"
+              title="Only letters, numbers or dash" />
+            <p class="validator-hint">
+              Must be 3 to 30 characters
+              <br />containing only letters, numbers or dash
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <!-- Phone validator -->
+      <section>
+        <h2 class="text-lg font-semibold mb-1">Phone Number Validator</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow">
+          <form class="w-full max-w-xs" novalidate>
+            <input type="tel" class="input validator tabular-nums" required placeholder="Phone"
+              pattern="[0-9]*" minlength="10" maxlength="10" title="Must be 10 digits" />
+            <p class="validator-hint">Must be 10 digits</p>
+          </form>
+        </div>
+      </section>
+
+      <!-- URL validator -->
+      <section>
+        <h2 class="text-lg font-semibold mb-1">URL Validator</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow">
+          <form class="w-full max-w-xs" novalidate>
+            <input type="url" class="input validator" required placeholder="https://" value="https://"
+              pattern="^(https?://)?([a-zA-Z0-9]([a-zA-Z0-9\-].*[a-zA-Z0-9])?\.)+[a-zA-Z].*$"
+              title="Must be valid URL" />
+            <p class="validator-hint">Must be valid URL</p>
+          </form>
+        </div>
+      </section>
+
+      <!-- Date validator -->
+      <section>
+        <h2 class="text-lg font-semibold mb-1">Date Validator</h2>
+        <p class="text-sm text-base-content/50 mb-4">Only dates in 2025 are valid.</p>
+        <div class="bg-base-100 rounded-2xl p-6 shadow">
+          <form class="w-full max-w-xs" novalidate>
+            <input type="date" class="input validator" required
+              min="2025-01-01" max="2025-12-31" title="Must be a date in 2025" />
+            <p class="validator-hint">Must be a date in 2025</p>
+          </form>
+        </div>
+      </section>
+
+      <!-- Number validator -->
+      <section>
+        <h2 class="text-lg font-semibold mb-1">Number Validator</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow">
+          <form class="w-full max-w-xs" novalidate>
+            <input type="number" class="input validator" required placeholder="1 – 10"
+              min="1" max="10" title="Must be between 1 and 10" />
+            <p class="validator-hint">Must be between 1 and 10</p>
+          </form>
+        </div>
+      </section>
+
+      <!-- Checkbox & toggle validators -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Checkbox &amp; Toggle Validators</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-10 items-start">
+          <form autocomplete="off" novalidate>
+            <p class="text-sm text-base-content/50 mb-2">Checkbox — must be checked</p>
+            <input type="checkbox" class="checkbox validator" required title="Required" />
+            <p class="validator-hint">Required</p>
+          </form>
+          <form autocomplete="off" novalidate>
+            <p class="text-sm text-base-content/50 mb-2">Toggle — must be on</p>
+            <input type="checkbox" class="toggle validator" required title="Required" />
+            <p class="validator-hint">Required</p>
+          </form>
+        </div>
+      </section>
+
+      <!-- Select validator -->
+      <section>
+        <h2 class="text-lg font-semibold mb-1">Select Validator</h2>
+        <p class="text-sm text-base-content/50 mb-4">Submit without choosing to see the error style.</p>
+        <div class="bg-base-100 rounded-2xl p-6 shadow">
+          <form autocomplete="off" class="w-full max-w-xs flex flex-col gap-2" onsubmit="event.preventDefault()">
+            <select class="select validator" required>
+              <option disabled selected value="">Choose:</option>
+              <option>Tabs</option>
+              <option>Spaces</option>
+            </select>
+            <p class="validator-hint">Required</p>
+            <button class="btn" type="submit">Submit form</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Full form validator -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Full Form Validator</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow">
+          <form autocomplete="off" class="fieldset bg-base-200 border border-base-300 rounded-box w-xs border p-4 flex flex-col gap-1" onsubmit="event.preventDefault()">
+            <fieldset class="fieldset">
+              <label class="label" for="fv-email">Email</label>
+              <input id="fv-email" type="email" class="input validator" placeholder="Email" required />
+              <p class="validator-hint hidden">Enter a valid email address</p>
+            </fieldset>
+
+            <fieldset class="fieldset">
+              <label class="label" for="fv-password">Password</label>
+              <input id="fv-password" type="password" class="input validator" placeholder="Password"
+                required minlength="8"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Must be more than 8 characters, including number, lowercase letter, uppercase letter" />
+              <p class="validator-hint hidden">
+                Min 8 chars — one number, one lowercase, one uppercase
+              </p>
+            </fieldset>
+
+            <fieldset class="fieldset">
+              <label class="label" for="fv-user">Username</label>
+              <input id="fv-user" type="text" class="input validator" placeholder="Username"
+                required pattern="[A-Za-z][A-Za-z0-9\-]*" minlength="3" maxlength="30"
+                title="Only letters, numbers or dash" />
+              <p class="validator-hint hidden">3–30 characters: letters, numbers or dash</p>
+            </fieldset>
+
+            <button class="btn btn-neutral mt-4" type="submit">Login</button>
+            <button class="btn btn-ghost mt-1" type="reset">Reset</button>
+          </form>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

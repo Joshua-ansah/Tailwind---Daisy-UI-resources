@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagination — Component Library</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="min-h-screen bg-base-200">
+    <header class="bg-base-100 border-b border-base-300 px-6 py-4 flex items-center gap-4">
+      <a href="/components/index.html" class="btn btn-ghost btn-sm gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Components
+      </a>
+      <span class="text-base-content/30">/</span>
+      <h1 class="font-bold text-base-content">Pagination</h1>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-10 space-y-12">
+
+      <!-- Active button -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Pagination with Active Button</h2>
+        <div class="bg-base-100 rounded-2xl p-8 shadow flex flex-wrap items-center justify-center gap-4">
+          <div class="join">
+            <button class="join-item btn">1</button>
+            <button class="join-item btn btn-active">2</button>
+            <button class="join-item btn">3</button>
+            <button class="join-item btn">4</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sizes -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Sizes</h2>
+        <div class="bg-base-100 rounded-2xl p-8 shadow flex flex-col gap-4 items-center">
+          <div class="join">
+            <button class="join-item btn btn-xs">1</button>
+            <button class="join-item btn btn-xs btn-active">2</button>
+            <button class="join-item btn btn-xs">3</button>
+            <button class="join-item btn btn-xs">4</button>
+          </div>
+          <div class="join">
+            <button class="join-item btn btn-sm">1</button>
+            <button class="join-item btn btn-sm btn-active">2</button>
+            <button class="join-item btn btn-sm">3</button>
+            <button class="join-item btn btn-sm">4</button>
+          </div>
+          <div class="join">
+            <button class="join-item btn btn-md">1</button>
+            <button class="join-item btn btn-md btn-active">2</button>
+            <button class="join-item btn btn-md">3</button>
+            <button class="join-item btn btn-md">4</button>
+          </div>
+          <div class="join">
+            <button class="join-item btn btn-lg">1</button>
+            <button class="join-item btn btn-lg btn-active">2</button>
+            <button class="join-item btn btn-lg">3</button>
+            <button class="join-item btn btn-lg">4</button>
+          </div>
+          <div class="join">
+            <button class="join-item btn btn-xl">1</button>
+            <button class="join-item btn btn-xl btn-active">2</button>
+            <button class="join-item btn btn-xl">3</button>
+            <button class="join-item btn btn-xl">4</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Disabled ellipsis -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">With a Disabled Button</h2>
+        <div class="bg-base-100 rounded-2xl p-8 shadow flex flex-wrap items-center justify-center gap-4">
+          <div class="join">
+            <button class="join-item btn">1</button>
+            <button class="join-item btn">2</button>
+            <button class="join-item btn btn-disabled">…</button>
+            <button class="join-item btn">99</button>
+            <button class="join-item btn">100</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Prev / Next label -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Prev / Current / Next</h2>
+        <div class="bg-base-100 rounded-2xl p-8 shadow flex flex-wrap items-center justify-center gap-4">
+          <div class="join">
+            <button class="join-item btn">«</button>
+            <button class="join-item btn">Page 22</button>
+            <button class="join-item btn">»</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Equal-width outline prev/next -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Prev / Next Outline (Equal Width)</h2>
+        <div class="bg-base-100 rounded-2xl p-8 shadow">
+          <div class="join grid grid-cols-2 max-w-sm mx-auto">
+            <button class="join-item btn btn-outline">Previous page</button>
+            <button class="join-item btn btn-outline">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Radio inputs -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Using Radio Inputs</h2>
+        <div class="bg-base-100 rounded-2xl p-8 shadow flex flex-wrap items-center justify-center gap-4">
+          <div class="join">
+            <input class="join-item btn btn-square" type="radio" name="pagination_radio" autocomplete="off" aria-label="1" checked />
+            <input class="join-item btn btn-square" type="radio" name="pagination_radio" autocomplete="off" aria-label="2" />
+            <input class="join-item btn btn-square" type="radio" name="pagination_radio" autocomplete="off" aria-label="3" />
+            <input class="join-item btn btn-square" type="radio" name="pagination_radio" autocomplete="off" aria-label="4" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Full-featured with icons + active state -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Full-Featured Pagination</h2>
+        <div class="bg-base-100 rounded-2xl p-8 shadow flex flex-col items-center gap-6">
+          <!-- Icon prev/next + numbered pages -->
+          <div class="join">
+            <button class="join-item btn btn-sm" aria-label="First">«</button>
+            <button class="join-item btn btn-sm" aria-label="Previous">‹</button>
+            <button class="join-item btn btn-sm">1</button>
+            <button class="join-item btn btn-sm">2</button>
+            <button class="join-item btn btn-sm btn-active">3</button>
+            <button class="join-item btn btn-sm">4</button>
+            <button class="join-item btn btn-sm">5</button>
+            <button class="join-item btn btn-sm btn-disabled">…</button>
+            <button class="join-item btn btn-sm">20</button>
+            <button class="join-item btn btn-sm" aria-label="Next">›</button>
+            <button class="join-item btn btn-sm" aria-label="Last">»</button>
+          </div>
+          <!-- Page info + jump-to-page -->
+          <div class="flex items-center gap-3 text-sm text-base-content/60">
+            <span>Page 3 of 20</span>
+            <span>·</span>
+            <span>Go to</span>
+            <input type="number" min="1" max="20" value="3" class="input input-sm w-16 text-center" />
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

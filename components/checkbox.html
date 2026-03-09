@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkbox — Component Library</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="min-h-screen bg-base-200">
+    <header class="bg-base-100 border-b border-base-300 px-6 py-4 flex items-center gap-4">
+      <a href="/components/index.html" class="btn btn-ghost btn-sm gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Components
+      </a>
+      <span class="text-base-content/30">/</span>
+      <h1 class="font-bold text-base-content">Checkbox</h1>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-10 space-y-12">
+
+      <!-- Basic -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Checkbox</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-4 items-center">
+          <input type="checkbox" checked class="checkbox" />
+          <input type="checkbox" class="checkbox" />
+        </div>
+      </section>
+
+      <!-- With fieldset and label -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">With Fieldset and Label</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow">
+          <fieldset class="fieldset p-4 bg-base-100 border border-base-300 rounded-box w-64">
+            <legend class="fieldset-legend">Login options</legend>
+            <label class="label">
+              <input type="checkbox" checked class="checkbox" />
+              Remember me
+            </label>
+            <label class="label">
+              <input type="checkbox" class="checkbox" />
+              Stay signed in
+            </label>
+          </fieldset>
+        </div>
+      </section>
+
+      <!-- Sizes -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Sizes</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-4 items-center">
+          <div class="flex flex-col items-center gap-1">
+            <input type="checkbox" checked class="checkbox checkbox-xs" />
+            <span class="text-xs text-base-content/50">xs</span>
+          </div>
+          <div class="flex flex-col items-center gap-1">
+            <input type="checkbox" checked class="checkbox checkbox-sm" />
+            <span class="text-xs text-base-content/50">sm</span>
+          </div>
+          <div class="flex flex-col items-center gap-1">
+            <input type="checkbox" checked class="checkbox checkbox-md" />
+            <span class="text-xs text-base-content/50">md</span>
+          </div>
+          <div class="flex flex-col items-center gap-1">
+            <input type="checkbox" checked class="checkbox checkbox-lg" />
+            <span class="text-xs text-base-content/50">lg</span>
+          </div>
+          <div class="flex flex-col items-center gap-1">
+            <input type="checkbox" checked class="checkbox checkbox-xl" />
+            <span class="text-xs text-base-content/50">xl</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Colors -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Colors</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-4 items-center">
+          <div class="flex flex-col items-center gap-1">
+            <input type="checkbox" checked class="checkbox checkbox-primary" />
+            <span class="text-xs text-base-content/50">primary</span>
+          </div>
+          <div class="flex flex-col items-center gap-1">
+            <input type="checkbox" checked class="checkbox checkbox-secondary" />
+            <span class="text-xs text-base-content/50">secondary</span>
+          </div>
+          <div class="flex flex-col items-center gap-1">
+            <input type="checkbox" checked class="checkbox checkbox-accent" />
+            <span class="text-xs text-base-content/50">accent</span>
+          </div>
+          <div class="flex flex-col items-center gap-1">
+            <input type="checkbox" checked class="checkbox checkbox-neutral" />
+            <span class="text-xs text-base-content/50">neutral</span>
+          </div>
+          <div class="flex flex-col items-center gap-1">
+            <input type="checkbox" checked class="checkbox checkbox-info" />
+            <span class="text-xs text-base-content/50">info</span>
+          </div>
+          <div class="flex flex-col items-center gap-1">
+            <input type="checkbox" checked class="checkbox checkbox-success" />
+            <span class="text-xs text-base-content/50">success</span>
+          </div>
+          <div class="flex flex-col items-center gap-1">
+            <input type="checkbox" checked class="checkbox checkbox-warning" />
+            <span class="text-xs text-base-content/50">warning</span>
+          </div>
+          <div class="flex flex-col items-center gap-1">
+            <input type="checkbox" checked class="checkbox checkbox-error" />
+            <span class="text-xs text-base-content/50">error</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Disabled -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Disabled</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-6 items-center">
+          <div class="flex flex-col items-center gap-1">
+            <input type="checkbox" disabled class="checkbox" />
+            <span class="text-xs text-base-content/50">unchecked</span>
+          </div>
+          <div class="flex flex-col items-center gap-1">
+            <input type="checkbox" disabled checked class="checkbox" />
+            <span class="text-xs text-base-content/50">checked</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Indeterminate -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Indeterminate</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-6 items-center">
+          <div class="flex flex-col items-center gap-1">
+            <input type="checkbox" id="indeterminate-demo" class="checkbox" />
+            <span class="text-xs text-base-content/50">indeterminate</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <input type="checkbox" id="select-all" class="checkbox" />
+            <span class="text-sm">Select all</span>
+          </div>
+          <div class="flex flex-col gap-2 ml-6">
+            <label class="flex items-center gap-3 text-sm">
+              <input type="checkbox" class="checkbox checkbox-sm child-checkbox" checked /> Item one
+            </label>
+            <label class="flex items-center gap-3 text-sm">
+              <input type="checkbox" class="checkbox checkbox-sm child-checkbox" /> Item two
+            </label>
+            <label class="flex items-center gap-3 text-sm">
+              <input type="checkbox" class="checkbox checkbox-sm child-checkbox" checked /> Item three
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- Custom colors -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Custom Colors</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-4 items-center">
+          <input type="checkbox" checked class="checkbox border-indigo-600 bg-indigo-500 checked:bg-orange-400 checked:text-orange-800 checked:border-orange-500" />
+          <input type="checkbox" checked class="checkbox border-pink-600 bg-pink-100 checked:bg-pink-500 checked:text-white checked:border-pink-600" />
+          <input type="checkbox" checked class="checkbox border-emerald-600 bg-emerald-100 checked:bg-emerald-500 checked:text-white checked:border-emerald-600" />
+        </div>
+      </section>
+
+      <!-- In a form context -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Form Context</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow">
+          <fieldset class="fieldset w-xs bg-base-200 border border-base-300 rounded-box p-4">
+            <legend class="fieldset-legend">Notification preferences</legend>
+            <label class="label cursor-pointer justify-start gap-3">
+              <input type="checkbox" class="checkbox checkbox-primary" checked />
+              Email notifications
+            </label>
+            <label class="label cursor-pointer justify-start gap-3">
+              <input type="checkbox" class="checkbox checkbox-primary" />
+              SMS notifications
+            </label>
+            <label class="label cursor-pointer justify-start gap-3">
+              <input type="checkbox" class="checkbox checkbox-primary" checked />
+              Push notifications
+            </label>
+            <label class="label cursor-pointer justify-start gap-3">
+              <input type="checkbox" class="checkbox checkbox-primary" disabled />
+              In-app (unavailable)
+            </label>
+          </fieldset>
+        </div>
+      </section>
+
+    </main>
+
+    <script>
+      // Indeterminate demo
+      document.getElementById('indeterminate-demo').indeterminate = true;
+
+      // Select-all with indeterminate
+      const selectAll = document.getElementById('select-all');
+      const childBoxes = document.querySelectorAll('.child-checkbox');
+
+      function updateSelectAll() {
+        const checkedCount = [...childBoxes].filter(cb => cb.checked).length;
+        selectAll.checked = checkedCount === childBoxes.length;
+        selectAll.indeterminate = checkedCount > 0 && checkedCount < childBoxes.length;
+      }
+
+      selectAll.addEventListener('change', () => {
+        childBoxes.forEach(cb => cb.checked = selectAll.checked);
+      });
+
+      childBoxes.forEach(cb => cb.addEventListener('change', updateSelectAll));
+      updateSelectAll();
+    </script>
+  </body>
+</html>

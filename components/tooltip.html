@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tooltip — Component Library</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="min-h-screen bg-base-200">
+    <header class="bg-base-100 border-b border-base-300 px-6 py-4 flex items-center gap-4">
+      <a href="/components/index.html" class="btn btn-ghost btn-sm gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Components
+      </a>
+      <span class="text-base-content/30">/</span>
+      <h1 class="font-bold text-base-content">Tooltip</h1>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-10 space-y-12">
+
+      <!-- Basic -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Tooltip</h2>
+        <div class="bg-base-100 rounded-2xl p-8 shadow flex flex-wrap gap-6 items-center justify-center">
+          <div class="tooltip" data-tip="hello">
+            <button class="btn">Hover me</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- tooltip-content (custom content) -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Custom Tooltip Content</h2>
+        <div class="bg-base-100 rounded-2xl p-8 shadow flex flex-wrap gap-8 items-center justify-center">
+          <div class="tooltip">
+            <div class="tooltip-content">
+              <div class="animate-bounce text-orange-400 -rotate-10 text-2xl font-black">Wow!</div>
+            </div>
+            <button class="btn">Hover me</button>
+          </div>
+          <div class="tooltip">
+            <div class="tooltip-content">
+              <div class="flex items-center gap-2 text-sm font-medium">
+                <span class="badge badge-success badge-sm"></span> Online
+              </div>
+            </div>
+            <div class="avatar">
+              <div class="w-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">JD</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Force open -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Force Open</h2>
+        <div class="bg-base-100 rounded-2xl p-10 shadow flex flex-wrap gap-6 items-center justify-center">
+          <div class="tooltip tooltip-open" data-tip="always visible">
+            <button class="btn">Force open</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Placement -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Placement</h2>
+        <div class="bg-base-100 rounded-2xl p-12 shadow flex flex-wrap gap-8 items-center justify-center">
+          <div class="tooltip tooltip-open tooltip-top" data-tip="top">
+            <button class="btn">Top</button>
+          </div>
+          <div class="tooltip tooltip-open tooltip-bottom" data-tip="bottom">
+            <button class="btn">Bottom</button>
+          </div>
+          <div class="tooltip tooltip-open tooltip-left" data-tip="left">
+            <button class="btn">Left</button>
+          </div>
+          <div class="tooltip tooltip-open tooltip-right" data-tip="right">
+            <button class="btn">Right</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Colors -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Colors</h2>
+        <div class="bg-base-100 rounded-2xl p-10 shadow flex flex-wrap gap-6 items-center justify-center">
+          <div class="tooltip tooltip-open tooltip-neutral" data-tip="neutral">
+            <button class="btn btn-neutral">neutral</button>
+          </div>
+          <div class="tooltip tooltip-open tooltip-primary" data-tip="primary">
+            <button class="btn btn-primary">primary</button>
+          </div>
+          <div class="tooltip tooltip-open tooltip-secondary" data-tip="secondary">
+            <button class="btn btn-secondary">secondary</button>
+          </div>
+          <div class="tooltip tooltip-open tooltip-accent" data-tip="accent">
+            <button class="btn btn-accent">accent</button>
+          </div>
+          <div class="tooltip tooltip-open tooltip-info" data-tip="info">
+            <button class="btn btn-info">info</button>
+          </div>
+          <div class="tooltip tooltip-open tooltip-success" data-tip="success">
+            <button class="btn btn-success">success</button>
+          </div>
+          <div class="tooltip tooltip-open tooltip-warning" data-tip="warning">
+            <button class="btn btn-warning">warning</button>
+          </div>
+          <div class="tooltip tooltip-open tooltip-error" data-tip="error">
+            <button class="btn btn-error">error</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- On different elements -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">On Different Elements</h2>
+        <div class="bg-base-100 rounded-2xl p-8 shadow flex flex-wrap gap-8 items-center">
+          <!-- Badge -->
+          <div class="tooltip" data-tip="10 new messages">
+            <span class="badge badge-primary badge-lg">Inbox</span>
+          </div>
+          <!-- Icon button -->
+          <div class="tooltip" data-tip="Settings">
+            <button class="btn btn-ghost btn-circle">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><circle cx="12" cy="12" r="3" stroke-width="2"/></svg>
+            </button>
+          </div>
+          <!-- Input -->
+          <div class="tooltip tooltip-right" data-tip="Must be a valid email">
+            <input type="email" class="input" placeholder="email@example.com" />
+          </div>
+          <!-- Avatar initials -->
+          <div class="tooltip" data-tip="Jane Doe — Admin">
+            <div class="avatar placeholder">
+              <div class="w-10 rounded-full bg-neutral text-neutral-content font-bold">JD</div>
+            </div>
+          </div>
+          <!-- Disabled button (use span wrapper) -->
+          <div class="tooltip" data-tip="You don't have permission">
+            <span tabindex="0">
+              <button class="btn" disabled>Delete</button>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Responsive (large screen only) -->
+      <section>
+        <h2 class="text-lg font-semibold mb-1">Responsive — Large Screen Only</h2>
+        <p class="text-sm text-base-content/50 mb-4">Tooltip only appears on <code class="text-xs bg-base-200 px-1 py-0.5 rounded">lg:</code> and up.</p>
+        <div class="bg-base-100 rounded-2xl p-8 shadow flex flex-wrap gap-6 items-center">
+          <div class="lg:tooltip" data-tip="Only visible on large screens">
+            <button class="btn">Hover me (desktop only)</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

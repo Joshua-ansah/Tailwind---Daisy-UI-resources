@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal — Component Library</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="min-h-screen bg-base-200">
+    <header class="bg-base-100 border-b border-base-300 px-6 py-4 flex items-center gap-4">
+      <a href="/components/index.html" class="btn btn-ghost btn-sm gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Components
+      </a>
+      <span class="text-base-content/30">/</span>
+      <h1 class="font-bold text-base-content">Modal</h1>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-10 space-y-12">
+
+      <!-- Method 1: dialog element -->
+      <section>
+        <h2 class="text-lg font-semibold mb-1">Method 1 — HTML <code class="text-sm bg-base-200 px-1 py-0.5 rounded">&lt;dialog&gt;</code> element (recommended)</h2>
+        <p class="text-sm text-base-content/50 mb-4">Opened with <code class="text-xs bg-base-200 px-1 py-0.5 rounded">ID.showModal()</code>. Closable with <kbd class="kbd kbd-sm">Esc</kbd>.</p>
+        <div class="bg-base-100 rounded-2xl p-8 shadow flex flex-wrap gap-4 items-center">
+          <button class="btn" onclick="modal_basic.showModal()">Basic modal</button>
+          <button class="btn" onclick="modal_backdrop.showModal()">Close on backdrop</button>
+          <button class="btn" onclick="modal_x.showModal()">With ✕ button</button>
+          <button class="btn" onclick="modal_wide.showModal()">Custom width</button>
+          <button class="btn" onclick="modal_responsive.showModal()">Responsive</button>
+        </div>
+      </section>
+
+      <!-- Method 2: checkbox -->
+      <section>
+        <h2 class="text-lg font-semibold mb-1">Method 2 — Checkbox (legacy)</h2>
+        <p class="text-sm text-base-content/50 mb-4">A hidden <code class="text-xs bg-base-200 px-1 py-0.5 rounded">input[type=checkbox]</code> controls state; <code class="text-xs bg-base-200 px-1 py-0.5 rounded">&lt;label&gt;</code> toggles it.</p>
+        <div class="bg-base-100 rounded-2xl p-8 shadow flex flex-wrap gap-4 items-center">
+          <label for="modal_checkbox" class="btn">Checkbox modal</label>
+          <label for="modal_checkbox_backdrop" class="btn">Close on backdrop</label>
+        </div>
+      </section>
+
+      <!-- Method 3: anchor link -->
+      <section>
+        <h2 class="text-lg font-semibold mb-1">Method 3 — Anchor link (legacy)</h2>
+        <p class="text-sm text-base-content/50 mb-4">The modal is shown when the URL contains the anchor hash.</p>
+        <div class="bg-base-100 rounded-2xl p-8 shadow flex flex-wrap gap-4 items-center">
+          <a href="#modal_anchor" class="btn">Anchor link modal</a>
+        </div>
+      </section>
+
+      <!-- Placements -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Placement</h2>
+        <div class="bg-base-100 rounded-2xl p-8 shadow flex flex-wrap gap-4 items-center">
+          <button class="btn" onclick="modal_top.showModal()">Top</button>
+          <button class="btn" onclick="modal_middle.showModal()">Middle (default)</button>
+          <button class="btn" onclick="modal_bottom.showModal()">Bottom</button>
+          <button class="btn" onclick="modal_start.showModal()">Start</button>
+          <button class="btn" onclick="modal_end.showModal()">End</button>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ─── METHOD 1 DIALOGS ──────────────────────────────── -->
+
+    <!-- Basic -->
+    <dialog id="modal_basic" class="modal">
+      <div class="modal-box">
+        <h3 class="font-bold text-lg">Hello!</h3>
+        <p class="py-4">Press <kbd class="kbd kbd-sm">Esc</kbd> or click the button below to close.</p>
+        <div class="modal-action">
+          <form method="dialog">
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Close on backdrop -->
+    <dialog id="modal_backdrop" class="modal">
+      <div class="modal-box">
+        <h3 class="font-bold text-lg">Hello!</h3>
+        <p class="py-4">Press <kbd class="kbd kbd-sm">Esc</kbd> or click outside to close.</p>
+      </div>
+      <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+      </form>
+    </dialog>
+
+    <!-- Corner ✕ button -->
+    <dialog id="modal_x" class="modal">
+      <div class="modal-box">
+        <form method="dialog">
+          <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+        </form>
+        <h3 class="font-bold text-lg">Hello!</h3>
+        <p class="py-4">Press <kbd class="kbd kbd-sm">Esc</kbd> or click ✕ to close.</p>
+      </div>
+    </dialog>
+
+    <!-- Custom width -->
+    <dialog id="modal_wide" class="modal">
+      <div class="modal-box w-11/12 max-w-5xl">
+        <h3 class="font-bold text-lg">Wide modal (max-w-5xl)</h3>
+        <p class="py-4">Use any <code class="text-sm bg-base-200 px-1 py-0.5 rounded">w-*</code> and <code class="text-sm bg-base-200 px-1 py-0.5 rounded">max-w-*</code> utility class to customize the width.</p>
+        <div class="modal-action">
+          <form method="dialog">
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Responsive: bottom on sm, middle on md+ -->
+    <dialog id="modal_responsive" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <h3 class="font-bold text-lg">Responsive modal</h3>
+        <p class="py-4">Slides up from the bottom on mobile; centres on tablet and up.</p>
+        <div class="modal-action">
+          <form method="dialog">
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- ─── METHOD 2 CHECKBOXES ───────────────────────────── -->
+
+    <input type="checkbox" id="modal_checkbox" class="modal-toggle" />
+    <div class="modal" role="dialog">
+      <div class="modal-box">
+        <h3 class="font-bold text-lg">Checkbox modal</h3>
+        <p class="py-4">This modal is controlled by a hidden checkbox.</p>
+        <div class="modal-action">
+          <label for="modal_checkbox" class="btn">Close</label>
+        </div>
+      </div>
+    </div>
+
+    <input type="checkbox" id="modal_checkbox_backdrop" class="modal-toggle" />
+    <div class="modal" role="dialog">
+      <div class="modal-box">
+        <h3 class="font-bold text-lg">Close on backdrop</h3>
+        <p class="py-4">Click outside the box to close.</p>
+      </div>
+      <label class="modal-backdrop" for="modal_checkbox_backdrop">Close</label>
+    </div>
+
+    <!-- ─── METHOD 3 ANCHOR ───────────────────────────────── -->
+
+    <div class="modal" role="dialog" id="modal_anchor">
+      <div class="modal-box">
+        <h3 class="font-bold text-lg">Anchor modal</h3>
+        <p class="py-4">This modal is shown when the URL contains <code class="text-sm bg-base-200 px-1 py-0.5 rounded">#modal_anchor</code>.</p>
+        <div class="modal-action">
+          <a href="#" class="btn">Close</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── PLACEMENT DIALOGS ─────────────────────────────── -->
+
+    <dialog id="modal_top" class="modal modal-top">
+      <div class="modal-box">
+        <h3 class="font-bold text-lg">Top modal</h3>
+        <p class="py-4">Appears at the top of the viewport.</p>
+        <div class="modal-action">
+          <form method="dialog"><button class="btn">Close</button></form>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="modal_middle" class="modal modal-middle">
+      <div class="modal-box">
+        <h3 class="font-bold text-lg">Middle modal (default)</h3>
+        <p class="py-4">Centred vertically in the viewport.</p>
+        <div class="modal-action">
+          <form method="dialog"><button class="btn">Close</button></form>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="modal_bottom" class="modal modal-bottom">
+      <div class="modal-box">
+        <h3 class="font-bold text-lg">Bottom modal</h3>
+        <p class="py-4">Anchored to the bottom of the viewport.</p>
+        <div class="modal-action">
+          <form method="dialog"><button class="btn">Close</button></form>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="modal_start" class="modal modal-start">
+      <div class="modal-box">
+        <h3 class="font-bold text-lg">Start modal</h3>
+        <p class="py-4">Aligned to the horizontal start.</p>
+        <div class="modal-action">
+          <form method="dialog"><button class="btn">Close</button></form>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="modal_end" class="modal modal-end">
+      <div class="modal-box">
+        <h3 class="font-bold text-lg">End modal</h3>
+        <p class="py-4">Aligned to the horizontal end.</p>
+        <div class="modal-action">
+          <form method="dialog"><button class="btn">Close</button></form>
+        </div>
+      </div>
+    </dialog>
+
+  </body>
+</html>

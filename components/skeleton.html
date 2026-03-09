@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skeleton — Component Library</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="min-h-screen bg-base-200">
+    <header class="bg-base-100 border-b border-base-300 px-6 py-4 flex items-center gap-4">
+      <a href="/components/index.html" class="btn btn-ghost btn-sm gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Components
+      </a>
+      <span class="text-base-content/30">/</span>
+      <h1 class="font-bold text-base-content">Skeleton</h1>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-10 space-y-12">
+
+      <!-- Basic skeleton -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Skeleton</h2>
+        <div class="bg-base-100 rounded-2xl p-8 shadow flex flex-wrap gap-6 items-center">
+          <div class="skeleton w-32 h-32"></div>
+        </div>
+      </section>
+
+      <!-- Circle with content -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Circle with Content</h2>
+        <div class="bg-base-100 rounded-2xl p-8 shadow flex flex-wrap gap-8 items-start">
+          <div class="flex flex-col gap-4 w-52">
+            <div class="flex gap-4 items-center">
+              <div class="skeleton w-16 h-16 rounded-full shrink-0"></div>
+              <div class="flex flex-col gap-4">
+                <div class="skeleton h-4 w-20"></div>
+                <div class="skeleton h-4 w-28"></div>
+              </div>
+            </div>
+            <div class="skeleton h-32 w-full"></div>
+          </div>
+          <!-- Second example — avatar + text lines only -->
+          <div class="flex flex-col gap-4 w-52">
+            <div class="flex gap-4 items-center">
+              <div class="skeleton w-12 h-12 rounded-full shrink-0"></div>
+              <div class="flex flex-col gap-3">
+                <div class="skeleton h-3 w-24"></div>
+                <div class="skeleton h-3 w-16"></div>
+              </div>
+            </div>
+            <div class="skeleton h-4 w-full"></div>
+            <div class="skeleton h-4 w-5/6"></div>
+            <div class="skeleton h-4 w-4/6"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Rectangle with content (card-style) -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Rectangle with Content</h2>
+        <div class="bg-base-100 rounded-2xl p-8 shadow flex flex-wrap gap-8 items-start">
+          <div class="flex flex-col gap-4 w-52">
+            <div class="skeleton h-32 w-full"></div>
+            <div class="skeleton h-4 w-28"></div>
+            <div class="skeleton h-4 w-full"></div>
+            <div class="skeleton h-4 w-full"></div>
+          </div>
+          <!-- Wider card -->
+          <div class="flex flex-col gap-4 w-72">
+            <div class="skeleton h-44 w-full rounded-xl"></div>
+            <div class="skeleton h-5 w-40"></div>
+            <div class="skeleton h-4 w-full"></div>
+            <div class="skeleton h-4 w-5/6"></div>
+            <div class="flex gap-2">
+              <div class="skeleton h-8 w-20 rounded-full"></div>
+              <div class="skeleton h-8 w-20 rounded-full"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- skeleton-text — animated gradient text -->
+      <section>
+        <h2 class="text-lg font-semibold mb-1">skeleton-text</h2>
+        <p class="text-sm text-base-content/50 mb-4">Animates the text color instead of background, useful for inline loading placeholders.</p>
+        <div class="bg-base-100 rounded-2xl p-8 shadow space-y-4">
+          <p class="text-2xl font-bold"><span class="skeleton skeleton-text">AI is thinking harder...</span></p>
+          <p class="text-base"><span class="skeleton skeleton-text">Generating your response, please wait a moment.</span></p>
+          <p class="text-sm text-base-content/60"><span class="skeleton skeleton-text">Loading article summary...</span></p>
+        </div>
+      </section>
+
+      <!-- List skeleton -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">List / Feed Skeleton</h2>
+        <div class="bg-base-100 rounded-2xl p-8 shadow space-y-5 max-w-md">
+          <!-- Item 1 -->
+          <div class="flex gap-3 items-start">
+            <div class="skeleton w-10 h-10 rounded-full shrink-0"></div>
+            <div class="flex flex-col gap-2 flex-1">
+              <div class="skeleton h-3 w-32"></div>
+              <div class="skeleton h-3 w-full"></div>
+              <div class="skeleton h-3 w-4/5"></div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="flex gap-3 items-start">
+            <div class="skeleton w-10 h-10 rounded-full shrink-0"></div>
+            <div class="flex flex-col gap-2 flex-1">
+              <div class="skeleton h-3 w-28"></div>
+              <div class="skeleton h-3 w-full"></div>
+              <div class="skeleton h-3 w-3/5"></div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="flex gap-3 items-start">
+            <div class="skeleton w-10 h-10 rounded-full shrink-0"></div>
+            <div class="flex flex-col gap-2 flex-1">
+              <div class="skeleton h-3 w-36"></div>
+              <div class="skeleton h-3 w-full"></div>
+              <div class="skeleton h-3 w-2/3"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Table skeleton -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Table Skeleton</h2>
+        <div class="bg-base-100 rounded-2xl p-8 shadow overflow-x-auto">
+          <table class="table w-full">
+            <thead>
+              <tr>
+                <th><div class="skeleton h-4 w-6"></div></th>
+                <th><div class="skeleton h-4 w-24"></div></th>
+                <th><div class="skeleton h-4 w-20"></div></th>
+                <th><div class="skeleton h-4 w-16"></div></th>
+                <th><div class="skeleton h-4 w-12"></div></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><div class="skeleton h-4 w-4"></div></td>
+                <td>
+                  <div class="flex items-center gap-3">
+                    <div class="skeleton w-10 h-10 rounded-full"></div>
+                    <div class="flex flex-col gap-2">
+                      <div class="skeleton h-3 w-28"></div>
+                      <div class="skeleton h-3 w-20"></div>
+                    </div>
+                  </div>
+                </td>
+                <td><div class="skeleton h-4 w-16"></div></td>
+                <td><div class="skeleton h-4 w-12"></div></td>
+                <td><div class="skeleton h-8 w-16 rounded-lg"></div></td>
+              </tr>
+              <tr>
+                <td><div class="skeleton h-4 w-4"></div></td>
+                <td>
+                  <div class="flex items-center gap-3">
+                    <div class="skeleton w-10 h-10 rounded-full"></div>
+                    <div class="flex flex-col gap-2">
+                      <div class="skeleton h-3 w-24"></div>
+                      <div class="skeleton h-3 w-32"></div>
+                    </div>
+                  </div>
+                </td>
+                <td><div class="skeleton h-4 w-20"></div></td>
+                <td><div class="skeleton h-4 w-14"></div></td>
+                <td><div class="skeleton h-8 w-16 rounded-lg"></div></td>
+              </tr>
+              <tr>
+                <td><div class="skeleton h-4 w-4"></div></td>
+                <td>
+                  <div class="flex items-center gap-3">
+                    <div class="skeleton w-10 h-10 rounded-full"></div>
+                    <div class="flex flex-col gap-2">
+                      <div class="skeleton h-3 w-20"></div>
+                      <div class="skeleton h-3 w-28"></div>
+                    </div>
+                  </div>
+                </td>
+                <td><div class="skeleton h-4 w-18"></div></td>
+                <td><div class="skeleton h-4 w-10"></div></td>
+                <td><div class="skeleton h-8 w-16 rounded-lg"></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

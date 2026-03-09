@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Steps — Component Library</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="min-h-screen bg-base-200">
+    <header class="bg-base-100 border-b border-base-300 px-6 py-4 flex items-center gap-4">
+      <a href="/components/index.html" class="btn btn-ghost btn-sm gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Components
+      </a>
+      <span class="text-base-content/30">/</span>
+      <h1 class="font-bold text-base-content">Steps</h1>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-10 space-y-12">
+
+      <!-- Horizontal -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Horizontal</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow overflow-x-auto">
+          <ul class="steps w-full">
+            <li class="step step-primary">Register</li>
+            <li class="step step-primary">Choose plan</li>
+            <li class="step">Purchase</li>
+            <li class="step">Receive Product</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Vertical -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Vertical</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow">
+          <ul class="steps steps-vertical">
+            <li class="step step-primary">Register</li>
+            <li class="step step-primary">Choose plan</li>
+            <li class="step">Purchase</li>
+            <li class="step">Receive Product</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Responsive -->
+      <section>
+        <h2 class="text-lg font-semibold mb-1">Responsive</h2>
+        <p class="text-sm text-base-content/50 mb-4">Vertical on small screens, horizontal on large screens.</p>
+        <div class="bg-base-100 rounded-2xl p-6 shadow overflow-x-auto">
+          <ul class="steps steps-vertical lg:steps-horizontal w-full">
+            <li class="step step-primary">Register</li>
+            <li class="step step-primary">Choose plan</li>
+            <li class="step">Purchase</li>
+            <li class="step">Receive Product</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Custom step-icon -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Custom Icon in Step</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow overflow-x-auto">
+          <ul class="steps w-full">
+            <li class="step step-neutral">
+              <span class="step-icon">😕</span>Step 1
+            </li>
+            <li class="step step-neutral">
+              <span class="step-icon">😃</span>Step 2
+            </li>
+            <li class="step">
+              <span class="step-icon">😍</span>Step 3
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- data-content -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">With data-content</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow overflow-x-auto">
+          <ul class="steps w-full">
+            <li data-content="?" class="step step-neutral">Step 1</li>
+            <li data-content="!" class="step step-neutral">Step 2</li>
+            <li data-content="✓" class="step step-neutral">Step 3</li>
+            <li data-content="✕" class="step step-neutral">Step 4</li>
+            <li data-content="★" class="step step-neutral">Step 5</li>
+            <li data-content="" class="step step-neutral">Step 6</li>
+            <li data-content="●" class="step step-neutral">Step 7</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Custom colors -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Custom Colors</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow overflow-x-auto">
+          <ul class="steps w-full">
+            <li class="step step-info">Fly to Moon</li>
+            <li class="step step-info">Shrink the Moon</li>
+            <li class="step step-info">Grab the Moon</li>
+            <li data-content="?" class="step step-error">Sit on Toilet</li>
+          </ul>
+        </div>
+
+        <div class="mt-6 bg-base-100 rounded-2xl p-6 shadow overflow-x-auto">
+          <ul class="steps w-full">
+            <li class="step step-success">Idea</li>
+            <li class="step step-success">Design</li>
+            <li class="step step-warning">Review</li>
+            <li class="step">Build</li>
+            <li class="step">Launch</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Scrollable overflow -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Scrollable (Many Steps)</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow">
+          <div class="overflow-x-auto">
+            <ul class="steps">
+              <li class="step">start</li>
+              <li class="step step-secondary">2</li>
+              <li class="step step-secondary">3</li>
+              <li class="step step-secondary">4</li>
+              <li class="step">5</li>
+              <li class="step step-accent">6</li>
+              <li class="step step-accent">7</li>
+              <li class="step">8</li>
+              <li class="step step-error">9</li>
+              <li class="step step-error">10</li>
+              <li class="step">11</li>
+              <li class="step">12</li>
+              <li class="step step-warning">13</li>
+              <li class="step step-warning">14</li>
+              <li class="step">15</li>
+              <li class="step step-neutral">16</li>
+              <li class="step step-neutral">17</li>
+              <li class="step step-neutral">18</li>
+              <li class="step step-neutral">19</li>
+              <li class="step step-neutral">20</li>
+              <li class="step step-neutral">21</li>
+              <li class="step step-neutral">22</li>
+              <li class="step step-neutral">23</li>
+              <li class="step step-neutral">end</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive wizard -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Interactive Wizard</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow">
+          <div class="overflow-x-auto mb-8">
+            <ul class="steps w-full" id="wizard-steps">
+              <li class="step step-primary" data-step="0">Account</li>
+              <li class="step" data-step="1">Profile</li>
+              <li class="step" data-step="2">Payment</li>
+              <li class="step" data-step="3">Review</li>
+            </ul>
+          </div>
+
+          <div class="max-w-md">
+            <div class="wizard-panel" id="panel-0">
+              <fieldset class="fieldset bg-base-200 border border-base-300 rounded-box p-4 w-full">
+                <legend class="fieldset-legend">Account</legend>
+                <label class="label" for="w-email">Email</label>
+                <input id="w-email" type="email" class="input" placeholder="you@example.com" />
+                <label class="label" for="w-pass">Password</label>
+                <input id="w-pass" type="password" class="input" placeholder="••••••••" />
+              </fieldset>
+            </div>
+            <div class="wizard-panel hidden" id="panel-1">
+              <fieldset class="fieldset bg-base-200 border border-base-300 rounded-box p-4 w-full">
+                <legend class="fieldset-legend">Profile</legend>
+                <label class="label" for="w-name">Full name</label>
+                <input id="w-name" type="text" class="input" placeholder="Jane Doe" />
+                <label class="label" for="w-bio">Bio</label>
+                <textarea id="w-bio" class="textarea" placeholder="Tell us about yourself"></textarea>
+              </fieldset>
+            </div>
+            <div class="wizard-panel hidden" id="panel-2">
+              <fieldset class="fieldset bg-base-200 border border-base-300 rounded-box p-4 w-full">
+                <legend class="fieldset-legend">Payment</legend>
+                <label class="label" for="w-card">Card number</label>
+                <input id="w-card" type="text" class="input tabular-nums" placeholder="•••• •••• •••• ••••" maxlength="19" />
+                <div class="flex gap-2 mt-2">
+                  <div class="flex-1">
+                    <label class="label" for="w-exp">Expiry</label>
+                    <input id="w-exp" type="text" class="input tabular-nums" placeholder="MM/YY" maxlength="5" />
+                  </div>
+                  <div class="w-24">
+                    <label class="label" for="w-cvv">CVV</label>
+                    <input id="w-cvv" type="text" class="input tabular-nums" placeholder="•••" maxlength="3" />
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="wizard-panel hidden" id="panel-3">
+              <div class="alert alert-success">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span>All set! Review your details and submit.</span>
+              </div>
+            </div>
+
+            <div class="flex justify-between mt-6">
+              <button class="btn btn-ghost" id="wizard-back" disabled>Back</button>
+              <button class="btn btn-primary" id="wizard-next">Next</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <script>
+      let currentStep = 0;
+      const totalSteps = 4;
+      const stepEls = document.querySelectorAll('#wizard-steps .step');
+      const panels = document.querySelectorAll('.wizard-panel');
+      const backBtn = document.getElementById('wizard-back');
+      const nextBtn = document.getElementById('wizard-next');
+
+      function updateWizard() {
+        stepEls.forEach((el, i) => {
+          el.classList.toggle('step-primary', i <= currentStep);
+        });
+        panels.forEach((el, i) => {
+          el.classList.toggle('hidden', i !== currentStep);
+        });
+        backBtn.disabled = currentStep === 0;
+        nextBtn.textContent = currentStep === totalSteps - 1 ? 'Submit' : 'Next';
+      }
+
+      nextBtn.addEventListener('click', () => {
+        if (currentStep < totalSteps - 1) { currentStep++; updateWizard(); }
+      });
+      backBtn.addEventListener('click', () => {
+        if (currentStep > 0) { currentStep--; updateWizard(); }
+      });
+    </script>
+  </body>
+</html>

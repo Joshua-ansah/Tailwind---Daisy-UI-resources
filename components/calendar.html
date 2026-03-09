@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar — Component Library</title>
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="https://unpkg.com/cally"></script>
+  </head>
+  <body class="min-h-screen bg-base-200">
+    <header class="bg-base-100 border-b border-base-300 px-6 py-4 flex items-center gap-4">
+      <a href="/components/index.html" class="btn btn-ghost btn-sm gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Components
+      </a>
+      <span class="text-base-content/30">/</span>
+      <h1 class="font-bold text-base-content">Calendar</h1>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-10 space-y-12">
+
+      <!-- Basic Single-Date Picker -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Single Date</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-8 items-start">
+          <calendar-date class="cally bg-base-100 border border-base-300 shadow-lg rounded-box">
+            <svg aria-label="Previous" class="fill-current size-4" slot="previous" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M15.75 19.5 8.25 12l7.5-7.5"></path></svg>
+            <svg aria-label="Next" class="fill-current size-4" slot="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path></svg>
+            <calendar-month></calendar-month>
+          </calendar-date>
+        </div>
+      </section>
+
+      <!-- Date Range Picker -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Date Range</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-8 items-start">
+          <calendar-range class="cally bg-base-100 border border-base-300 shadow-lg rounded-box">
+            <svg aria-label="Previous" class="fill-current size-4" slot="previous" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M15.75 19.5 8.25 12l7.5-7.5"></path></svg>
+            <svg aria-label="Next" class="fill-current size-4" slot="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path></svg>
+            <calendar-month></calendar-month>
+            <calendar-month offset="1"></calendar-month>
+          </calendar-range>
+        </div>
+      </section>
+
+      <!-- Date Picker with Input (Popover) -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Date Picker with Input</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow">
+          <div class="flex flex-wrap gap-8 items-start">
+
+            <!-- Single date + text input -->
+            <div class="flex flex-col gap-2">
+              <label class="label text-sm font-medium">Check-in</label>
+              <div class="dropdown">
+                <div tabindex="0" role="button">
+                  <input
+                    id="date-input"
+                    type="text"
+                    placeholder="Pick a date"
+                    readonly
+                    class="input input-bordered w-52 cursor-pointer"
+                  />
+                </div>
+                <div tabindex="0" class="dropdown-content z-10 mt-1 shadow-xl">
+                  <calendar-date
+                    id="picker-single"
+                    class="cally bg-base-100 border border-base-300 shadow-lg rounded-box"
+                  >
+                    <svg aria-label="Previous" class="fill-current size-4" slot="previous" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M15.75 19.5 8.25 12l7.5-7.5"></path></svg>
+                    <svg aria-label="Next" class="fill-current size-4" slot="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path></svg>
+                    <calendar-month></calendar-month>
+                  </calendar-date>
+                </div>
+              </div>
+            </div>
+
+            <!-- Range variant + two inputs -->
+            <div class="flex flex-col gap-2">
+              <label class="label text-sm font-medium">Stay Duration</label>
+              <div class="flex items-center gap-2">
+                <input id="range-from" type="text" placeholder="From" readonly class="input input-bordered w-36 cursor-pointer" />
+                <span class="text-base-content/40">→</span>
+                <input id="range-to"   type="text" placeholder="To"   readonly class="input input-bordered w-36 cursor-pointer" />
+              </div>
+              <div class="mt-1">
+                <calendar-range
+                  id="picker-range"
+                  class="cally bg-base-100 border border-base-300 shadow-lg rounded-box"
+                >
+                  <svg aria-label="Previous" class="fill-current size-4" slot="previous" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M15.75 19.5 8.25 12l7.5-7.5"></path></svg>
+                  <svg aria-label="Next" class="fill-current size-4" slot="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path></svg>
+                  <calendar-month></calendar-month>
+                  <calendar-month offset="1"></calendar-month>
+                </calendar-range>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Inside a Card / Booking Widget -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Booking Widget</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow">
+          <div class="card bg-base-200 w-fit shadow-md">
+            <div class="card-body gap-4">
+              <h2 class="card-title text-base">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                Reserve a Date
+              </h2>
+              <calendar-date id="booking-cal" class="cally bg-base-100 border border-base-300 rounded-box">
+                <svg aria-label="Previous" class="fill-current size-4" slot="previous" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M15.75 19.5 8.25 12l7.5-7.5"></path></svg>
+                <svg aria-label="Next" class="fill-current size-4" slot="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path></svg>
+                <calendar-month></calendar-month>
+              </calendar-date>
+              <div id="booking-output" class="text-sm text-base-content/50 italic">No date selected</div>
+              <div class="card-actions">
+                <button class="btn btn-primary btn-sm w-full" id="booking-confirm" disabled>Confirm Booking</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Theme Variants -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Theme Variants</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-8 items-start">
+
+          <!-- Neutral/Dark -->
+          <div data-theme="dark">
+            <p class="text-sm text-base-content/50 mb-3">Dark theme</p>
+            <calendar-date class="cally bg-base-100 border border-base-300 shadow-lg rounded-box">
+              <svg aria-label="Previous" class="fill-current size-4" slot="previous" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M15.75 19.5 8.25 12l7.5-7.5"></path></svg>
+              <svg aria-label="Next" class="fill-current size-4" slot="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path></svg>
+              <calendar-month></calendar-month>
+            </calendar-date>
+          </div>
+
+          <!-- Cupcake -->
+          <div data-theme="cupcake">
+            <p class="text-sm text-base-content/50 mb-3">Cupcake theme</p>
+            <calendar-date class="cally bg-base-100 border border-base-300 shadow-lg rounded-box">
+              <svg aria-label="Previous" class="fill-current size-4" slot="previous" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M15.75 19.5 8.25 12l7.5-7.5"></path></svg>
+              <svg aria-label="Next" class="fill-current size-4" slot="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path></svg>
+              <calendar-month></calendar-month>
+            </calendar-date>
+          </div>
+
+          <!-- Forest -->
+          <div data-theme="forest">
+            <p class="text-sm text-base-content/50 mb-3">Forest theme</p>
+            <calendar-date class="cally bg-base-100 border border-base-300 shadow-lg rounded-box">
+              <svg aria-label="Previous" class="fill-current size-4" slot="previous" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M15.75 19.5 8.25 12l7.5-7.5"></path></svg>
+              <svg aria-label="Next" class="fill-current size-4" slot="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path></svg>
+              <calendar-month></calendar-month>
+            </calendar-date>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <script>
+      // Single date picker → text input
+      const pickerSingle = document.getElementById('picker-single');
+      const dateInput = document.getElementById('date-input');
+      if (pickerSingle) {
+        pickerSingle.addEventListener('change', (e) => {
+          dateInput.value = e.target.value;
+        });
+      }
+
+      // Range picker → two inputs
+      const pickerRange = document.getElementById('picker-range');
+      const rangeFrom = document.getElementById('range-from');
+      const rangeTo = document.getElementById('range-to');
+      if (pickerRange) {
+        pickerRange.addEventListener('change', (e) => {
+          const { from, to } = e.target.value ? JSON.parse(e.target.value) : {};
+          rangeFrom.value = from ?? '';
+          rangeTo.value = to ?? '';
+        });
+      }
+
+      // Booking widget
+      const bookingCal = document.getElementById('booking-cal');
+      const bookingOutput = document.getElementById('booking-output');
+      const bookingConfirm = document.getElementById('booking-confirm');
+      if (bookingCal) {
+        bookingCal.addEventListener('change', (e) => {
+          const val = e.target.value;
+          if (val) {
+            bookingOutput.textContent = `Selected: ${val}`;
+            bookingOutput.classList.remove('italic', 'text-base-content/50');
+            bookingOutput.classList.add('font-medium', 'text-primary');
+            bookingConfirm.disabled = false;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

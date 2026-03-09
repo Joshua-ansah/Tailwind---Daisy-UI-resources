@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fieldset — Component Library</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="min-h-screen bg-base-200">
+    <header class="bg-base-100 border-b border-base-300 px-6 py-4 flex items-center gap-4">
+      <a href="/components/index.html" class="btn btn-ghost btn-sm gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Components
+      </a>
+      <span class="text-base-content/30">/</span>
+      <h1 class="font-bold text-base-content">Fieldset</h1>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-10 space-y-12">
+
+      <!-- Legend and label -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Fieldset with Legend and Label</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-8 items-start">
+          <fieldset class="fieldset w-xs">
+            <legend class="fieldset-legend">Page title</legend>
+            <input type="text" class="input" placeholder="My awesome page" />
+            <p class="label">You can edit page title later on from settings</p>
+          </fieldset>
+        </div>
+      </section>
+
+      <!-- With background and border -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">With Background and Border</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-8 items-start">
+          <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
+            <legend class="fieldset-legend">Page title</legend>
+            <input type="text" class="input" placeholder="My awesome page" />
+            <p class="label">You can edit page title later on from settings</p>
+          </fieldset>
+        </div>
+      </section>
+
+      <!-- Multiple inputs -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Multiple Inputs</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-8 items-start">
+          <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
+            <legend class="fieldset-legend">Page details</legend>
+            <label class="label" for="page-title">Title</label>
+            <input id="page-title" type="text" class="input" placeholder="My awesome page" />
+            <label class="label" for="page-slug">Slug</label>
+            <input id="page-slug" type="text" class="input" placeholder="my-awesome-page" />
+            <label class="label" for="page-author">Author</label>
+            <input id="page-author" type="text" class="input" placeholder="Name" />
+          </fieldset>
+        </div>
+      </section>
+
+      <!-- With join items -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">With Joined Items</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-8 items-start">
+          <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
+            <legend class="fieldset-legend">Settings</legend>
+            <div class="join">
+              <input type="text" class="input join-item" placeholder="Product name" />
+              <button class="btn join-item">Save</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
+            <legend class="fieldset-legend">Search</legend>
+            <div class="join">
+              <input type="text" class="input join-item" placeholder="Search…" />
+              <select class="select join-item">
+                <option>All</option>
+                <option>Posts</option>
+                <option>Users</option>
+              </select>
+              <button class="btn btn-primary join-item">Go</button>
+            </div>
+          </fieldset>
+        </div>
+      </section>
+
+      <!-- Login form -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Login Form</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-8 items-start">
+          <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
+            <legend class="fieldset-legend">Login</legend>
+            <label class="label" for="login-email">Email</label>
+            <input id="login-email" type="email" class="input" placeholder="you@example.com" />
+            <label class="label" for="login-password">Password</label>
+            <input id="login-password" type="password" class="input" placeholder="••••••••" />
+            <label class="label cursor-pointer justify-start gap-2 mt-1">
+              <input type="checkbox" class="checkbox checkbox-sm" />
+              Remember me
+            </label>
+            <button class="btn btn-neutral mt-4">Login</button>
+          </fieldset>
+
+          <!-- Register form -->
+          <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
+            <legend class="fieldset-legend">Register</legend>
+            <label class="label" for="reg-name">Full name</label>
+            <input id="reg-name" type="text" class="input" placeholder="Jane Doe" />
+            <label class="label" for="reg-email">Email</label>
+            <input id="reg-email" type="email" class="input" placeholder="you@example.com" />
+            <label class="label" for="reg-password">Password</label>
+            <input id="reg-password" type="password" class="input" placeholder="••••••••" />
+            <p class="label">Min. 8 characters, one uppercase, one number</p>
+            <button class="btn btn-primary mt-4">Create account</button>
+          </fieldset>
+        </div>
+      </section>
+
+      <!-- Checkboxes in fieldset -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Checkboxes and Radios</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-8 items-start">
+          <fieldset class="fieldset bg-base-200 border border-base-300 p-4 rounded-box">
+            <legend class="fieldset-legend">Interests</legend>
+            <label class="label cursor-pointer justify-start gap-3">
+              <input type="checkbox" class="checkbox checkbox-primary" checked /> Design
+            </label>
+            <label class="label cursor-pointer justify-start gap-3">
+              <input type="checkbox" class="checkbox checkbox-primary" checked /> Development
+            </label>
+            <label class="label cursor-pointer justify-start gap-3">
+              <input type="checkbox" class="checkbox checkbox-primary" /> Marketing
+            </label>
+          </fieldset>
+
+          <fieldset class="fieldset bg-base-200 border border-base-300 p-4 rounded-box">
+            <legend class="fieldset-legend">Plan</legend>
+            <label class="label cursor-pointer justify-start gap-3">
+              <input type="radio" class="radio radio-primary" name="plan" checked /> Free
+            </label>
+            <label class="label cursor-pointer justify-start gap-3">
+              <input type="radio" class="radio radio-primary" name="plan" /> Pro
+            </label>
+            <label class="label cursor-pointer justify-start gap-3">
+              <input type="radio" class="radio radio-primary" name="plan" /> Enterprise
+            </label>
+          </fieldset>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

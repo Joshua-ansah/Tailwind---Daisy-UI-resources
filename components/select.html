@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select — Component Library</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="min-h-screen bg-base-200">
+    <header class="bg-base-100 border-b border-base-300 px-6 py-4 flex items-center gap-4">
+      <a href="/components/index.html" class="btn btn-ghost btn-sm gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Components
+      </a>
+      <span class="text-base-content/30">/</span>
+      <h1 class="font-bold text-base-content">Select</h1>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-10 space-y-12">
+
+      <!-- Basic -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Select</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-4 items-center">
+          <select class="select">
+            <option disabled selected>Pick a color</option>
+            <option>Crimson</option>
+            <option>Amber</option>
+            <option>Velvet</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Ghost -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Ghost Style</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-4 items-center">
+          <select class="select select-ghost">
+            <option disabled selected>Pick a font</option>
+            <option>Inter</option>
+            <option>Poppins</option>
+            <option>Raleway</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- With fieldset and label -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">With Fieldset and Label</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-8 items-start">
+          <fieldset class="fieldset w-xs">
+            <legend class="fieldset-legend">Browsers</legend>
+            <select class="select">
+              <option disabled selected>Pick a browser</option>
+              <option>Chrome</option>
+              <option>Firefox</option>
+              <option>Safari</option>
+            </select>
+            <span class="label">Optional</span>
+          </fieldset>
+          <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
+            <legend class="fieldset-legend">Preferences</legend>
+            <label class="label" for="sel-theme">Theme</label>
+            <select id="sel-theme" class="select">
+              <option disabled selected>Choose theme</option>
+              <option>Light</option>
+              <option>Dark</option>
+              <option>System</option>
+            </select>
+            <label class="label" for="sel-lang">Language</label>
+            <select id="sel-lang" class="select">
+              <option disabled selected>Choose language</option>
+              <option>English</option>
+              <option>French</option>
+              <option>Spanish</option>
+            </select>
+          </fieldset>
+        </div>
+      </section>
+
+      <!-- Colors -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Colors</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow">
+          <div class="grid gap-3 max-w-xs">
+            <select class="select select-primary">
+              <option disabled selected>primary</option>
+              <option>VScode</option>
+              <option>VScode fork</option>
+            </select>
+            <select class="select select-secondary">
+              <option disabled selected>secondary</option>
+              <option>Zig</option>
+              <option>Go</option>
+            </select>
+            <select class="select select-accent">
+              <option disabled selected>accent</option>
+              <option>Light mode</option>
+              <option>Dark mode</option>
+            </select>
+            <select class="select select-neutral">
+              <option disabled selected>neutral</option>
+              <option>North America</option>
+              <option>EU west</option>
+            </select>
+            <select class="select select-info">
+              <option disabled selected>info</option>
+              <option>React</option>
+              <option>Vue</option>
+            </select>
+            <select class="select select-success">
+              <option disabled selected>success</option>
+              <option>npm</option>
+              <option>Bun</option>
+            </select>
+            <select class="select select-warning">
+              <option disabled selected>warning</option>
+              <option>Windows</option>
+              <option>MacOS</option>
+            </select>
+            <select class="select select-error">
+              <option disabled selected>error</option>
+              <option>GPT-4</option>
+              <option>Claude</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sizes -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Sizes</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow">
+          <div class="flex flex-col items-start gap-4 max-w-xs">
+            <select class="select select-xs">
+              <option disabled selected>Extra small</option>
+              <option>Option A</option>
+              <option>Option B</option>
+            </select>
+            <select class="select select-sm">
+              <option disabled selected>Small</option>
+              <option>Option A</option>
+              <option>Option B</option>
+            </select>
+            <select class="select select-md">
+              <option disabled selected>Medium</option>
+              <option>Option A</option>
+              <option>Option B</option>
+            </select>
+            <select class="select select-lg">
+              <option disabled selected>Large</option>
+              <option>Option A</option>
+              <option>Option B</option>
+            </select>
+            <select class="select select-xl">
+              <option disabled selected>Extra large</option>
+              <option>Option A</option>
+              <option>Option B</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- Disabled -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Disabled</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-4 items-center">
+          <select class="select" disabled>
+            <option>You can't touch this</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- OS native dropdown -->
+      <section>
+        <h2 class="text-lg font-semibold mb-1">Native OS Dropdown</h2>
+        <p class="text-sm text-base-content/50 mb-4">Use <code class="text-xs bg-base-200 px-1 py-0.5 rounded">appearance-none</code> to show OS-native option styling.</p>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-4 items-center">
+          <select class="select appearance-none">
+            <option disabled selected>Pick a color</option>
+            <option>Crimson</option>
+            <option>Amber</option>
+            <option>Velvet</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Select with validator -->
+      <section>
+        <h2 class="text-lg font-semibold mb-1">With Validator</h2>
+        <p class="text-sm text-base-content/50 mb-4">Submit without choosing to see the error color.</p>
+        <div class="bg-base-100 rounded-2xl p-6 shadow">
+          <form class="w-full max-w-xs flex flex-col gap-2" onsubmit="event.preventDefault()">
+            <select class="select validator" required>
+              <option disabled selected value="">Choose indentation:</option>
+              <option>Tabs</option>
+              <option>Spaces</option>
+            </select>
+            <p class="validator-hint">Required</p>
+            <button class="btn btn-sm" type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Grouped options -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Grouped Options</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-4 items-center">
+          <select class="select w-full max-w-xs">
+            <option disabled selected>Pick a fruit</option>
+            <optgroup label="Citrus">
+              <option>Orange</option>
+              <option>Lemon</option>
+              <option>Grapefruit</option>
+            </optgroup>
+            <optgroup label="Tropical">
+              <option>Mango</option>
+              <option>Pineapple</option>
+              <option>Papaya</option>
+            </optgroup>
+            <optgroup label="Berries">
+              <option>Strawberry</option>
+              <option>Blueberry</option>
+              <option>Raspberry</option>
+            </optgroup>
+          </select>
+          <select class="select w-full max-w-xs" multiple size="6">
+            <optgroup label="Citrus">
+              <option>Orange</option>
+              <option>Lemon</option>
+            </optgroup>
+            <optgroup label="Tropical">
+              <option>Mango</option>
+              <option>Pineapple</option>
+            </optgroup>
+            <optgroup label="Berries">
+              <option>Strawberry</option>
+              <option>Blueberry</option>
+            </optgroup>
+          </select>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

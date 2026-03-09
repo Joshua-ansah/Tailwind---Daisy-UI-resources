@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter — Component Library</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="min-h-screen bg-base-200">
+    <header class="bg-base-100 border-b border-base-300 px-6 py-4 flex items-center gap-4">
+      <a href="/components/index.html" class="btn btn-ghost btn-sm gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Components
+      </a>
+      <span class="text-base-content/30">/</span>
+      <h1 class="font-bold text-base-content">Filter</h1>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-10 space-y-12">
+
+      <!-- Radio filter with HTML form reset -->
+      <section>
+        <h2 class="text-lg font-semibold mb-1">Filter — Radio Buttons with Reset</h2>
+        <p class="text-sm text-base-content/50 mb-4">Uses a native HTML form so the reset button clears the selection automatically.</p>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-4 items-start">
+          <form class="filter">
+            <input class="btn btn-square" type="reset" value="×" />
+            <input class="btn" type="radio" name="frameworks" autocomplete="off" aria-label="Svelte" />
+            <input class="btn" type="radio" name="frameworks" autocomplete="off" aria-label="Vue" />
+            <input class="btn" type="radio" name="frameworks" autocomplete="off" aria-label="React" />
+            <input class="btn" type="radio" name="frameworks" autocomplete="off" aria-label="Angular" />
+          </form>
+        </div>
+      </section>
+
+      <!-- Filter without HTML form -->
+      <section>
+        <h2 class="text-lg font-semibold mb-1">Filter — Without HTML Form</h2>
+        <p class="text-sm text-base-content/50 mb-4">Use <code class="text-xs bg-base-200 px-1 py-0.5 rounded">filter-reset</code> on the "All" radio when a form element isn't available.</p>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-4 items-start">
+          <div class="filter">
+            <input class="btn filter-reset" type="radio" name="metaframeworks" autocomplete="off" aria-label="All" />
+            <input class="btn" type="radio" name="metaframeworks" autocomplete="off" aria-label="SvelteKit" />
+            <input class="btn" type="radio" name="metaframeworks" autocomplete="off" aria-label="Nuxt" />
+            <input class="btn" type="radio" name="metaframeworks" autocomplete="off" aria-label="Next.js" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Checkbox multi-select filter -->
+      <section>
+        <h2 class="text-lg font-semibold mb-1">Filter — Checkbox Multi-Select</h2>
+        <p class="text-sm text-base-content/50 mb-4">Checkboxes allow multiple selections. No <code class="text-xs bg-base-200 px-1 py-0.5 rounded">filter</code> class needed — just a form with a reset button.</p>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-4 items-start">
+          <form class="flex flex-wrap gap-2">
+            <input class="btn" type="checkbox" name="stack" autocomplete="off" aria-label="Svelte" />
+            <input class="btn" type="checkbox" name="stack" autocomplete="off" aria-label="Vue" />
+            <input class="btn" type="checkbox" name="stack" autocomplete="off" aria-label="React" />
+            <input class="btn" type="checkbox" name="stack" autocomplete="off" aria-label="Angular" />
+            <input class="btn btn-square" type="reset" value="×" />
+          </form>
+        </div>
+      </section>
+
+      <!-- With color variants -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Color Variants</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-col gap-4">
+          <div>
+            <p class="text-xs text-base-content/50 mb-2">Primary</p>
+            <form class="filter">
+              <input class="btn btn-square btn-primary" type="reset" value="×" />
+              <input class="btn btn-primary" type="radio" name="color-primary" autocomplete="off" aria-label="Option A" />
+              <input class="btn btn-primary" type="radio" name="color-primary" autocomplete="off" aria-label="Option B" />
+              <input class="btn btn-primary" type="radio" name="color-primary" autocomplete="off" aria-label="Option C" />
+            </form>
+          </div>
+          <div>
+            <p class="text-xs text-base-content/50 mb-2">Secondary</p>
+            <form class="filter">
+              <input class="btn btn-square btn-secondary" type="reset" value="×" />
+              <input class="btn btn-secondary" type="radio" name="color-secondary" autocomplete="off" aria-label="Option A" />
+              <input class="btn btn-secondary" type="radio" name="color-secondary" autocomplete="off" aria-label="Option B" />
+              <input class="btn btn-secondary" type="radio" name="color-secondary" autocomplete="off" aria-label="Option C" />
+            </form>
+          </div>
+          <div>
+            <p class="text-xs text-base-content/50 mb-2">Accent</p>
+            <form class="filter">
+              <input class="btn btn-square btn-accent" type="reset" value="×" />
+              <input class="btn btn-accent" type="radio" name="color-accent" autocomplete="off" aria-label="Option A" />
+              <input class="btn btn-accent" type="radio" name="color-accent" autocomplete="off" aria-label="Option B" />
+              <input class="btn btn-accent" type="radio" name="color-accent" autocomplete="off" aria-label="Option C" />
+            </form>
+          </div>
+          <div>
+            <p class="text-xs text-base-content/50 mb-2">Outline</p>
+            <form class="filter">
+              <input class="btn btn-square btn-outline" type="reset" value="×" />
+              <input class="btn btn-outline" type="radio" name="color-outline" autocomplete="off" aria-label="Option A" />
+              <input class="btn btn-outline" type="radio" name="color-outline" autocomplete="off" aria-label="Option B" />
+              <input class="btn btn-outline" type="radio" name="color-outline" autocomplete="off" aria-label="Option C" />
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Practical example: product category filter -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Practical Example — Product Category Filter</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow">
+          <div class="mb-4">
+            <p class="text-sm font-medium mb-2">Category</p>
+            <form class="filter" id="category-filter">
+              <input class="btn btn-sm btn-square" type="reset" value="×" />
+              <input class="btn btn-sm" type="radio" name="category" autocomplete="off" aria-label="All" />
+              <input class="btn btn-sm" type="radio" name="category" autocomplete="off" aria-label="Electronics" />
+              <input class="btn btn-sm" type="radio" name="category" autocomplete="off" aria-label="Clothing" />
+              <input class="btn btn-sm" type="radio" name="category" autocomplete="off" aria-label="Books" />
+              <input class="btn btn-sm" type="radio" name="category" autocomplete="off" aria-label="Home" />
+            </form>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-4" id="product-grid">
+            <div class="card card-sm bg-base-200" data-category="Electronics"><div class="card-body"><p class="font-medium text-sm">Wireless Headphones</p><span class="badge badge-xs badge-info">Electronics</span></div></div>
+            <div class="card card-sm bg-base-200" data-category="Clothing"><div class="card-body"><p class="font-medium text-sm">Cotton T-Shirt</p><span class="badge badge-xs badge-secondary">Clothing</span></div></div>
+            <div class="card card-sm bg-base-200" data-category="Books"><div class="card-body"><p class="font-medium text-sm">Design Patterns</p><span class="badge badge-xs badge-accent">Books</span></div></div>
+            <div class="card card-sm bg-base-200" data-category="Electronics"><div class="card-body"><p class="font-medium text-sm">USB-C Hub</p><span class="badge badge-xs badge-info">Electronics</span></div></div>
+            <div class="card card-sm bg-base-200" data-category="Home"><div class="card-body"><p class="font-medium text-sm">Ceramic Mug</p><span class="badge badge-xs badge-warning">Home</span></div></div>
+            <div class="card card-sm bg-base-200" data-category="Clothing"><div class="card-body"><p class="font-medium text-sm">Denim Jacket</p><span class="badge badge-xs badge-secondary">Clothing</span></div></div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <script>
+      // Product category filter demo
+      const categoryForm = document.getElementById('category-filter');
+      const productGrid = document.getElementById('product-grid');
+
+      function filterProducts() {
+        const selected = categoryForm.querySelector('input[type="radio"]:checked');
+        const label = selected ? selected.getAttribute('aria-label') : null;
+        productGrid.querySelectorAll('[data-category]').forEach(card => {
+          if (!label || label === 'All') {
+            card.style.display = '';
+          } else {
+            card.style.display = card.dataset.category === label ? '' : 'none';
+          }
+        });
+      }
+
+      categoryForm.addEventListener('change', filterProducts);
+      categoryForm.addEventListener('reset', () => setTimeout(filterProducts, 0));
+    </script>
+  </body>
+</html>

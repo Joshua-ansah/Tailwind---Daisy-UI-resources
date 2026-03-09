@@ -23,98 +23,100 @@
     <div class="max-w-5xl mx-auto px-6 py-10 space-y-12">
 
       <!-- Page Header -->
-      <div class="text-center py-6">
-        <h2 class="text-4xl font-extrabold text-base-content tracking-tight">Multi Column Layout</h2>
-        <p class="mt-2 text-base-content/50">Responsive multi-column layout demos built with Tailwind CSS &amp; DaisyUI</p>
+      <div class="text-center py-8">
+        <div class="inline-flex items-center gap-2 badge badge-neutral badge-sm mb-4">Personal Collection · Not affiliated with DaisyUI or Tailwind</div>
+        <h2 class="text-4xl font-extrabold text-base-content tracking-tight">Front-end Asset Library</h2>
+        <p class="mt-3 text-base-content/50 max-w-xl mx-auto">A personal collection of UI components and layout patterns built with TailwindCSS v4 and DaisyUI — curated as ready-to-use templates for AI-assisted development.</p>
+        <div class="flex flex-wrap gap-3 justify-center mt-6">
+          <a href="/components/index.html" class="btn btn-primary gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            Browse Components
+          </a>
+        </div>
       </div>
 
-      <!-- 3-Column Grid -->
+      <!-- About this project -->
       <section>
-        <h2 class="text-lg font-semibold text-base-content mb-4">3-Column Grid</h2>
+        <h2 class="text-lg font-semibold text-base-content mb-4">About this Project</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="card bg-base-100 shadow">
-            <div class="card-body">
-              <h3 class="card-title text-primary">Column One</h3>
-              <p class="text-sm text-base-content/60">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+            <div class="card-body gap-3">
+              <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+              </div>
+              <h3 class="font-bold">Personal Collection</h3>
+              <p class="text-sm text-base-content/60">Hand-curated UI components and layout patterns I use as a starting point in my own projects. Everything is built and tested with TailwindCSS v4 and DaisyUI.</p>
             </div>
           </div>
           <div class="card bg-base-100 shadow">
-            <div class="card-body">
-              <h3 class="card-title text-primary">Column Two</h3>
-              <p class="text-sm text-base-content/60">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            <div class="card-body gap-3">
+              <div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center">
+                <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-2"/></svg>
+              </div>
+              <h3 class="font-bold">AI-Ready Templates</h3>
+              <p class="text-sm text-base-content/60">Designed to be referenced by AI coding assistants. Each component page is a self-contained, readable HTML file — easy for a model to parse, adapt, and build on top of.</p>
             </div>
           </div>
           <div class="card bg-base-100 shadow">
-            <div class="card-body">
-              <h3 class="card-title text-primary">Column Three</h3>
-              <p class="text-sm text-base-content/60">Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis molestie.</p>
+            <div class="card-body gap-3">
+              <div class="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center">
+                <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+              </div>
+              <h3 class="font-bold">No Framework Lock-in</h3>
+              <p class="text-sm text-base-content/60">Plain HTML files served by Vite. No React, no Vue, no build complexity — just utility classes and components you can copy directly into any project.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Sidebar + Main Content Layout -->
+      <!-- Stack -->
       <section>
-        <h2 class="text-lg font-semibold text-base-content mb-4">Sidebar + Main Content</h2>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-
-          <!-- Sidebar -->
-          <aside class="md:col-span-1 bg-primary text-primary-content rounded-2xl shadow p-6">
-            <h3 class="font-bold mb-4">Sidebar</h3>
-            <nav class="space-y-1 text-sm">
-              <a href="#" class="block hover:bg-primary-focus rounded px-2 py-1.5 transition">Home</a>
-              <a href="#" class="block hover:bg-primary-focus rounded px-2 py-1.5 transition">About</a>
-              <a href="#" class="block hover:bg-primary-focus rounded px-2 py-1.5 transition">Projects</a>
-              <a href="#" class="block hover:bg-primary-focus rounded px-2 py-1.5 transition">Contact</a>
-            </nav>
-          </aside>
-
-          <!-- Main Content -->
-          <div class="md:col-span-3 card bg-base-100 shadow">
-            <div class="card-body">
-              <h3 class="card-title">Main Content Area</h3>
-              <p class="text-sm text-base-content/60">This is the main content area spanning 3 of 4 columns. It's great for article-style layouts where a sidebar provides navigation or supplementary content.</p>
-              <p class="text-sm text-base-content/60 mt-2">Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        <h2 class="text-lg font-semibold text-base-content mb-4">Stack</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="bg-base-100 rounded-2xl shadow p-5 flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-sky-500/10 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+            </div>
+            <div>
+              <p class="font-semibold">TailwindCSS v4</p>
+              <p class="text-sm text-base-content/50 mt-0.5">Utility-first CSS — loaded via the <code class="text-xs bg-base-200 px-1 py-0.5 rounded">@tailwindcss/vite</code> plugin. No PostCSS config needed.</p>
             </div>
           </div>
-
-        </div>
-      </section>
-
-      <!-- 4-Column Card Grid -->
-      <section>
-        <h2 class="text-lg font-semibold text-base-content mb-4">4-Column Card Grid</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="card bg-base-100 shadow overflow-hidden">
-            <div class="h-32 bg-gradient-to-br from-pink-400 to-purple-500"></div>
-            <div class="card-body p-4">
-              <h4 class="font-bold">Card Title 1</h4>
-              <p class="text-sm text-base-content/50">Short description goes here.</p>
+          <div class="bg-base-100 rounded-2xl shadow p-5 flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
+            </div>
+            <div>
+              <p class="font-semibold">DaisyUI</p>
+              <p class="text-sm text-base-content/50 mt-0.5">Semantic component classes on top of Tailwind. Loaded as a Tailwind plugin with <code class="text-xs bg-base-200 px-1 py-0.5 rounded">@plugin "daisyui"</code>.</p>
             </div>
           </div>
-          <div class="card bg-base-100 shadow overflow-hidden">
-            <div class="h-32 bg-gradient-to-br from-yellow-400 to-orange-500"></div>
-            <div class="card-body p-4">
-              <h4 class="font-bold">Card Title 2</h4>
-              <p class="text-sm text-base-content/50">Short description goes here.</p>
+          <div class="bg-base-100 rounded-2xl shadow p-5 flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-green-500/10 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <div>
+              <p class="font-semibold">Vite v7</p>
+              <p class="text-sm text-base-content/50 mt-0.5">Instant dev server with HMR. Run <code class="text-xs bg-base-200 px-1 py-0.5 rounded">npm run dev</code> to start locally.</p>
             </div>
           </div>
-          <div class="card bg-base-100 shadow overflow-hidden">
-            <div class="h-32 bg-gradient-to-br from-green-400 to-teal-500"></div>
-            <div class="card-body p-4">
-              <h4 class="font-bold">Card Title 3</h4>
-              <p class="text-sm text-base-content/50">Short description goes here.</p>
+          <div class="bg-base-100 rounded-2xl shadow p-5 flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
             </div>
-          </div>
-          <div class="card bg-base-100 shadow overflow-hidden">
-            <div class="h-32 bg-gradient-to-br from-blue-400 to-cyan-500"></div>
-            <div class="card-body p-4">
-              <h4 class="font-bold">Card Title 4</h4>
-              <p class="text-sm text-base-content/50">Short description goes here.</p>
+            <div>
+              <p class="font-semibold">Plain HTML</p>
+              <p class="text-sm text-base-content/50 mt-0.5">No framework, no JSX. Each component is a standalone <code class="text-xs bg-base-200 px-1 py-0.5 rounded">.html</code> file — easy to read, copy, and hand to an AI.</p>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Disclaimer -->
+      <div role="alert" class="alert alert-info">
+        <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <span class="text-sm">This is an independent personal project. I am not affiliated with, endorsed by, or connected to DaisyUI or Tailwind Labs in any way.</span>
+      </div>
 
     </div>
   </body>

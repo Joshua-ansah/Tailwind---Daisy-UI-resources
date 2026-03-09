@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Label — Component Library</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="min-h-screen bg-base-200">
+    <header class="bg-base-100 border-b border-base-300 px-6 py-4 flex items-center gap-4">
+      <a href="/components/index.html" class="btn btn-ghost btn-sm gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Components
+      </a>
+      <span class="text-base-content/30">/</span>
+      <h1 class="font-bold text-base-content">Label</h1>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-10 space-y-12">
+
+      <!-- Label prefix -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Label — Prefix</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-6 items-center">
+          <label class="input">
+            <span class="label">https://</span>
+            <input type="text" placeholder="URL" />
+          </label>
+          <label class="input">
+            <span class="label">@</span>
+            <input type="text" placeholder="username" />
+          </label>
+          <label class="input">
+            <span class="label">$</span>
+            <input type="text" placeholder="0.00" />
+          </label>
+        </div>
+      </section>
+
+      <!-- Label suffix -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Label — Suffix</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-6 items-center">
+          <label class="input">
+            <input type="text" placeholder="domain name" />
+            <span class="label">.com</span>
+          </label>
+          <label class="input">
+            <input type="number" placeholder="0" />
+            <span class="label">px</span>
+          </label>
+          <label class="input">
+            <input type="number" placeholder="100" />
+            <span class="label">%</span>
+          </label>
+        </div>
+      </section>
+
+      <!-- Label for select -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Label — Select</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-6 items-center">
+          <label class="select">
+            <span class="label">Type</span>
+            <select>
+              <option>Personal</option>
+              <option>Business</option>
+            </select>
+          </label>
+          <label class="select">
+            <span class="label">Country</span>
+            <select>
+              <option>Ghana</option>
+              <option>Nigeria</option>
+              <option>Kenya</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <!-- Label for date -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Label — Date &amp; Time Inputs</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-6 items-start">
+          <label class="input">
+            <span class="label">Publish date</span>
+            <input type="date" />
+          </label>
+          <label class="input">
+            <span class="label">Start time</span>
+            <input type="time" />
+          </label>
+          <label class="input">
+            <span class="label">Month</span>
+            <input type="month" />
+          </label>
+        </div>
+      </section>
+
+      <!-- Floating Label -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Floating Label</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-6 items-end">
+          <label class="floating-label w-full max-w-xs">
+            <span>Your Email</span>
+            <input type="email" placeholder="mail@site.com" class="input input-md" />
+          </label>
+          <label class="floating-label w-full max-w-xs">
+            <span>Full Name</span>
+            <input type="text" placeholder="Jane Doe" class="input input-md" />
+          </label>
+          <label class="floating-label w-full max-w-xs">
+            <span>Website</span>
+            <input type="url" placeholder="https://example.com" class="input input-md" />
+          </label>
+        </div>
+      </section>
+
+      <!-- Floating Label sizes -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Floating Label — Sizes</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow">
+          <div class="grid gap-5 max-w-xs">
+            <label class="floating-label">
+              <input type="text" placeholder="Extra Small" class="input input-xs" />
+              <span>Extra Small</span>
+            </label>
+            <label class="floating-label">
+              <input type="text" placeholder="Small" class="input input-sm" />
+              <span>Small</span>
+            </label>
+            <label class="floating-label">
+              <input type="text" placeholder="Medium" class="input input-md" />
+              <span>Medium</span>
+            </label>
+            <label class="floating-label">
+              <input type="text" placeholder="Large" class="input input-lg" />
+              <span>Large</span>
+            </label>
+            <label class="floating-label">
+              <input type="text" placeholder="Extra Large" class="input input-xl" />
+              <span>Extra Large</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- Floating Label with select -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Floating Label — Select</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow flex flex-wrap gap-6 items-end">
+          <label class="floating-label w-full max-w-xs">
+            <span>Country</span>
+            <select class="select select-md w-full">
+              <option value="" disabled selected></option>
+              <option>Ghana</option>
+              <option>Nigeria</option>
+              <option>Kenya</option>
+              <option>South Africa</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <!-- Combined: prefix + floating label in a form -->
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Combined Usage — Address Form</h2>
+        <div class="bg-base-100 rounded-2xl p-6 shadow">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-xl">
+            <label class="floating-label">
+              <input type="text" placeholder="First name" class="input input-md" />
+              <span>First name</span>
+            </label>
+            <label class="floating-label">
+              <input type="text" placeholder="Last name" class="input input-md" />
+              <span>Last name</span>
+            </label>
+            <label class="input sm:col-span-2">
+              <span class="label">@</span>
+              <input type="text" placeholder="username" />
+            </label>
+            <label class="input">
+              <span class="label">+233</span>
+              <input type="tel" placeholder="Phone number" />
+            </label>
+            <label class="floating-label">
+              <input type="email" placeholder="Email" class="input input-md" />
+              <span>Email</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>
